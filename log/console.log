@@ -1,0 +1,725 @@
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (80, 9): Unknown identifier "r_addr1".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (80, 9): Cannot find object declaration.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+register_file_tb register_file_tb TB_ARCHITECTURE
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  6:56 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/register_file_test.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/register_file_test.asdb'.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  6:57 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+run 1500ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 1500 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  6:57 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  6:58 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+run 1500ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 1500 ns
+# 8 signal(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 1500ns
+# KERNEL: stopped at time: 3 us
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  6:59 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:01 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:04 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:04 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:05 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:05 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:06 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:06 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:10 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:16 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  93.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:21 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+# 1 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:22 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:27 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+# Warning: WAVEFORM: Object matching /register_file_tb/DEBUG not found in c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:40 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+# Warning: Cannot set breakpoint. No executable statement found or debugging data is unavailable. Compile source files with the -dbg argument of the acom/alog command or check the Enable Debug option in the Compilation | VHDL/Verilog category of the Design Settings dialog box.
+# 1 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:42 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: COMP96_0019: TestBench/register_file_TB.vhd : (103, 1): Keyword 'when' expected.
+# Error: COMP96_0015: TestBench/register_file_TB.vhd : (103, 1): ';' expected.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7104 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  7:47 PM, Wednesday, September 5, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 400ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__62.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /register_file_tb/UUT,  Process: line__63.
+# KERNEL: stopped at time: 400 ns
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (52, 9): Unknown identifier "w_loopback".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (52, 9): Cannot find object declaration.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/register_file_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 7103 kB (elbread=1280 elab2=5674 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  8:35 PM, Wednesday, September 5, 2018
+#  Simulation has been initi

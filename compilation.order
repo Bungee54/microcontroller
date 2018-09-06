@@ -1,0 +1,13 @@
+.\src\synchronous_ram.vhd
+.\src\alu.vhd
+.\src\register_file.vhd
+.\src\cpu.vhd
+.\graphics\ALU.bde
+.\src\cpu.bde
+.\graphics\register_file.bde
+.\graphics\synchronous_ram.bde
+.\src\graphics.bde
+.\src\TestBench\synchronous_ram_TB.vhd
+.\src\TestBench\register_file_TB.vhd
+.\src\TestBench\alu_TB.vhd
+.\src\TestBench\cpu_TB.vhd

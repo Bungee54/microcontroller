@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" 
+MESSAGE "Compile Entity "register_file_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_register_file"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]" 
