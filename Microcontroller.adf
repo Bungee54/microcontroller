@@ -24,7 +24,7 @@ LANGUAGE=VHDL
 FLOWTOOLS=NONE
 REFRESH_FLOW=1
 FAMILY=
-fileopenfolder=C:\My_Aldec_Designs\test_workspace\Microcontroller\graphics
+fileopenfolder=C:\My_Aldec_Designs\test_workspace\Microcontroller\src
 
 [LocalVerilogSets]
 EnableSLP=1
@@ -44,68 +44,10 @@ WindowVisible=0
 TestBench=1
 
 [HierarchyViewer]
-HierarchyInformation=cpu_tb|tb_architecture|0  
+HierarchyInformation=cpu_tb|tb_architecture|0
 ShowHide=ShowTopLevel
 Selected=
 
-[Files]
-/synchronous_ram.vhd=-1
-/alu.vhd=-1
-/register_file.vhd=-1
-/SRAM_test.asdb=-1
-/SRAM_test.awc=-1
-/register_file_test.asdb=-1
-/register_file_test.awc=-1
-/alu_test.asdb=-1
-/alu_test.awc=-1
-/cpu.vhd=-1
-/..\graphics\ALU.bde=-1
-/cpu.bde=-1
-/..\graphics\register_file.bde=-1
-/..\graphics\synchronous_ram.bde=-1
-/graphics.bde=-1
-TestBench/synchronous_ram_TB.vhd=-1
-TestBench/synchronous_ram_TB_runtest.do=-1
-TestBench/register_file_TB.vhd=-1
-TestBench/register_file_TB_runtest.do=-1
-TestBench/alu_TB.vhd=-1
-TestBench/alu_TB_runtest.do=-1
-TestBench/cpu_TB.vhd=-1
-TestBench/cpu_TB_runtest.do=-1
-
-[Files.Data]
-.\src\synchronous_ram.vhd=VHDL Source Code
-.\src\alu.vhd=VHDL Source Code
-.\src\register_file.vhd=VHDL Source Code
-.\src\SRAM_test.asdb=Accelerated Waveform File
-.\src\SRAM_test.awc=Accelerated Waveform Configuration
-.\src\register_file_test.asdb=Accelerated Waveform File
-.\src\register_file_test.awc=Accelerated Waveform Configuration
-.\src\alu_test.asdb=Accelerated Waveform File
-.\src\alu_test.awc=Accelerated Waveform Configuration
-.\src\cpu.vhd=VHDL Source Code
-.\graphics\ALU.bde=Block Diagram
-.\src\cpu.bde=Block Diagram
-.\graphics\register_file.bde=Block Diagram
-.\graphics\synchronous_ram.bde=Block Diagram
-.\src\graphics.bde=Block Diagram
-.\src\TestBench\synchronous_ram_TB.vhd=VHDL Test Bench
-.\src\TestBench\synchronous_ram_TB_runtest.do=Macro
-.\src\TestBench\register_file_TB.vhd=VHDL Test Bench
-.\src\TestBench\register_file_TB_runtest.do=Macro
-.\src\TestBench\alu_TB.vhd=VHDL Test Bench
-.\src\TestBench\alu_TB_runtest.do=Macro
-.\src\TestBench\cpu_TB.vhd=VHDL Test Bench
-.\src\TestBench\cpu_TB_runtest.do=Macro
-
-[file_out:/..\graphics\ALU.bde]
-/..\compile\ALU.vhd=-1
-[file_out:/cpu.bde]
-/..\compile\cpu.vhd=-1
-[file_out:/..\graphics\register_file.bde]
-/..\compile\register_file.vhd=-1
-[file_out:/..\graphics\synchronous_ram.bde]
-/..\compile\synchronous_ram.vhd=-1
 [Folders]
 Name3=Makefiles
 Directory3=c:\My_Aldec_Designs\test_workspace\Microcontroller\
@@ -122,3 +64,44 @@ Extension6=pdf
 Name7=HTML
 Directory7=c:\My_Aldec_Designs\test_workspace\Microcontroller\
 Extension7=htm;html
+
+[Files]
+/synchronous_ram.vhd=-1
+/alu.vhd=-1
+/register_file.vhd=-1
+/register_file_test.asdb=-1
+/register_file_test.awc=-1
+/alu_test.asdb=-1
+/alu_test.awc=-1
+/cpu.vhd=-1
+/initial_mem.txt=-1
+/sram_test_loadfromfile.awc=-1
+TestBench/synchronous_ram_TB.vhd=-1
+TestBench/synchronous_ram_TB_runtest.do=-1
+TestBench/register_file_TB.vhd=-1
+TestBench/register_file_TB_runtest.do=-1
+TestBench/alu_TB.vhd=-1
+TestBench/alu_TB_runtest.do=-1
+TestBench/cpu_TB.vhd=-1
+TestBench/cpu_TB_runtest.do=-1
+
+[Files.Data]
+.\src\synchronous_ram.vhd=VHDL Source Code
+.\src\alu.vhd=VHDL Source Code
+.\src\register_file.vhd=VHDL Source Code
+.\src\register_file_test.asdb=Accelerated Waveform File
+.\src\register_file_test.awc=Accelerated Waveform Configuration
+.\src\alu_test.asdb=Accelerated Waveform File
+.\src\alu_test.awc=Accelerated Waveform Configuration
+.\src\cpu.vhd=VHDL Source Code
+.\src\initial_mem.txt=Text File
+.\src\sram_test_loadfromfile.awc=Accelerated Waveform Configuration
+.\src\TestBench\synchronous_ram_TB.vhd=VHDL Test Bench
+.\src\TestBench\synchronous_ram_TB_runtest.do=Macro
+.\src\TestBench\register_file_TB.vhd=VHDL Test Bench
+.\src\TestBench\register_file_TB_runtest.do=Macro
+.\src\TestBench\alu_TB.vhd=VHDL Test Bench
+.\src\TestBench\alu_TB_runtest.do=Macro
+.\src\TestBench\cpu_TB.vhd=VHDL Test Bench
+.\src\TestBench\cpu_TB_runtest.do=Macro
+

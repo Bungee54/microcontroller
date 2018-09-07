@@ -67,6 +67,10 @@ architecture rtl of cpu is
     signal regf_rdata2 : STD_LOGIC_VECTOR(7 downto 0);
 
     signal ctrl_state : unsigned(3 downto 0);
+        -- STATE 0: Fetch Instruction
+        -- STATE 1: Advance r_pc
+        -- ...
+
     constant c_STATE_MAX : unsigned(ctrl_state'range) := to_unsigned(1, ctrl_state'left+1);
 
 begin

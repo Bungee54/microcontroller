@@ -6,9 +6,4 @@ i<>.\src\TestBench\register_file_TB.vhd
 i<>.\src\TestBench\alu_TB.vhd
 i<>.\src\cpu.vhd
 i<>.\src\TestBench\cpu_TB.vhd
-i<>.\graphics\ALU.bde
 i<>.\graphics\cpu.bde
-i<>.\graphics\register_file.bde
-i<>.\graphics\synchronous_ram.bde
-i<>.\src\cpu.bde
-i<>.\src\graphics.bde
