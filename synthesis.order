@@ -7,3 +7,4 @@ i<>.\src\TestBench\alu_TB.vhd
 i<>.\src\cpu.vhd
 i<>.\src\TestBench\cpu_TB.vhd
 i<>.\graphics\cpu.bde
+i<>.\src\microcontroller_package.vhd

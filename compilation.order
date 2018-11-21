@@ -2,6 +2,7 @@
 .\src\alu.vhd
 .\src\register_file.vhd
 .\src\cpu.vhd
+.\src\microcontroller_package.vhd
 .\src\TestBench\synchronous_ram_TB.vhd
 .\src\TestBench\register_file_TB.vhd
 .\src\TestBench\alu_TB.vhd

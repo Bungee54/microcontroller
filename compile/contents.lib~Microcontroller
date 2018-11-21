@@ -1,10 +1,10 @@
-141
+146
 ~E 1 "./../src/alu.vhd" 8 ALU
 ~A 1 "./../src/alu.vhd" 21 behavioral
 ~E 1 "./../src/TestBench/alu_TB.vhd" 8 alu_tb
 ~A 1 "./../src/TestBench/alu_TB.vhd" 11 TB_ARCHITECTURE
-~E 1 "./../src/cpu.vhd" 9 cpu
-~A 1 "./../src/cpu.vhd" 18 rtl
+~E 1 "./../src/cpu.vhd" 10 cpu
+~A 1 "./../src/cpu.vhd" 19 rtl
 ~E 1 "./../src/TestBench/cpu_TB.vhd" 7 cpu_tb
 ~A 1 "./../src/TestBench/cpu_TB.vhd" 10 TB_ARCHITECTURE
 ~E 1 "./../src/register_file.vhd" 8 register_file

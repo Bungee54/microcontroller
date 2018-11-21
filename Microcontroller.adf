@@ -44,7 +44,7 @@ WindowVisible=0
 TestBench=1
 
 [HierarchyViewer]
-HierarchyInformation=cpu_tb|tb_architecture|0
+HierarchyInformation=cpu_tb|TB_ARCHITECTURE|0 register_file_tb|TB_ARCHITECTURE|0 synchronous_ram_tb|TB_ARCHITECTURE|0 
 ShowHide=ShowTopLevel
 Selected=
 
@@ -76,6 +76,7 @@ Extension7=htm;html
 /cpu.vhd=-1
 /initial_mem.txt=-1
 /sram_test_loadfromfile.awc=-1
+/microcontroller_package.vhd=-1
 TestBench/synchronous_ram_TB.vhd=-1
 TestBench/synchronous_ram_TB_runtest.do=-1
 TestBench/register_file_TB.vhd=-1
@@ -96,6 +97,7 @@ TestBench/cpu_TB_runtest.do=-1
 .\src\cpu.vhd=VHDL Source Code
 .\src\initial_mem.txt=Text File
 .\src\sram_test_loadfromfile.awc=Accelerated Waveform Configuration
+.\src\microcontroller_package.vhd=VHDL Source Code
 .\src\TestBench\synchronous_ram_TB.vhd=VHDL Test Bench
 .\src\TestBench\synchronous_ram_TB_runtest.do=Macro
 .\src\TestBench\register_file_TB.vhd=VHDL Test Bench

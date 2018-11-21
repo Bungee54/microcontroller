@@ -5,6 +5,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use IEEE.std_logic_unsigned.all;
+use microcontroller_package.all;
 
 entity cpu is
     port (
@@ -47,7 +48,8 @@ architecture rtl of cpu is
 
     signal r_status : STD_LOGIC_VECTOR(7 downto 0); -- Status register (zero, carry, neg, overflow, TBD, TBD, TBD, TBD) <- 7 downto 0
     signal r_pc : STD_LOGIC_VECTOR(7 downto 0); -- Program counter
-    signal r_ir : STD_LOGIC_VECTOR(15 downto 0); -- Instruction register
+    signal r_ir : STD_LOGIC_VECTOR(word_size - 1 downto 0); -- Instruction register
+    signal r_intern1 : STD_LOGIC_VECTOR(word_size - 1 downto 0);
 
     signal alu_in1 : STD_LOGIC_VECTOR(7 downto 0);
     signal alu_in2 : STD_LOGIC_VECTOR(7 downto 0);
@@ -55,7 +57,7 @@ architecture rtl of cpu is
     signal alu_output : STD_LOGIC_VECTOR(7 downto 0);
 
     signal sram_addr : STD_LOGIC_VECTOR(7 downto 0);
-    signal sram_data : STD_LOGIC_VECTOR(7 downto 0);
+    signal sram_data : STD_LOGIC_VECTOR(word_size - 1 downto 0);
     signal sram_rw : STD_LOGIC;
 
     signal regf_raddr1 : STD_LOGIC_VECTOR(2 downto 0);
@@ -67,11 +69,12 @@ architecture rtl of cpu is
     signal regf_rdata2 : STD_LOGIC_VECTOR(7 downto 0);
 
     signal ctrl_state : unsigned(3 downto 0);
-        -- STATE 0: Fetch Instruction
-        -- STATE 1: Advance r_pc
+        -- STATE 0: Pre-read instruction
+        -- STATE 1: Fetch instruction
+        -- STATE 2: Advance r_pc
         -- ...
 
-    constant c_STATE_MAX : unsigned(ctrl_state'range) := to_unsigned(1, ctrl_state'left+1);
+    constant c_STATE_MAX : unsigned(ctrl_state'range) := to_unsigned(3, ctrl_state'left+1);
 
 begin
     comp_ALU : ALU
@@ -130,21 +133,23 @@ begin
         end if;
 
         if (rising_edge(i_clk) and (not rising_edge(i_rst))) then
-            if (ctrl_state = 0) then -- Fetch (request instruction)
-                sram_addr <= r_pc;
-                sram_data <= "ZZZZZZZZ";
-                sram_rw <= '0';
-            elsif (ctrl_state = 1) then -- Advance r_pc
-                r_pc <= r_pc + 1;
-            else
-                -- Shouldn't happen, at least not yet
-            end if;
-
-            if (ctrl_state = c_STATE_MAX) then
-                ctrl_state <= to_unsigned(0, ctrl_state'left+1);
-            else
-                ctrl_state <= ctrl_state + 1;
-            end if;
+            case ctrl_state is
+                when to_unsigned(0, 4) => -- Pre-read instruction
+                    sram_addr <= r_pc;
+                    sram_data <= "ZZZZZZZZ";
+                    sram_rw <= '0';
+                    ctrl_state <= ctrl_state + 1;
+                when to_unsigned(1, 4) => -- Fetch instruction
+                    r_ir <= sram_data;
+                    ctrl_state <= ctrl_state + 1;
+                when to_unsigned(2, 4) => -- Increment r_pc
+                    r_pc <= r_pc + 1;
+                    ctrl_state <= ctrl_state + 1;
+                when to_unsigned(3, 4) => -- Decode instruction in r_ir
+                    decode_instruction;
+                when others =>
+                    ctrl_state <= to_unsigned(0, 4);
+            end case;
         end if;
     end process RUN;
 end rtl;

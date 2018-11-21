@@ -1,9 +1,2 @@
-"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\synchronous_ram.vhd" VHDL Microcontroller 1 0 0 -02 -08
-"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd" VHDL Microcontroller 1 0 0 -02 -08
-"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd" VHDL Microcontroller 1 0 0 -02 -08
 "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd" VHDL Microcontroller 1 0 0 -02 -08
-"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\synchronous_ram_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
-"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
-"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
-"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
 . . 0 0 0
