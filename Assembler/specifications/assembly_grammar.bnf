@@ -1,0 +1,13 @@
+Grammar                                       
+--------------------------------------------    
+line          : LABEL_DEF INSTRUCTION operandlist
+              | INSTRUCTION operandlist
+              | INSTRUCTION 
+
+operandlist   : operandlist COMMA operand
+              | operand
+
+operand       : REGISTER
+              | NUMBER
+              | LABEL_REF
+

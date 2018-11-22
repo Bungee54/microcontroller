@@ -1,0 +1,161 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> line
+Rule 1     line -> LABEL_DEF INSTRUCTION operandlist
+Rule 2     line -> INSTRUCTION operandlist
+Rule 3     line -> INSTRUCTION
+Rule 4     operandlist -> operandlist COMMA operand
+Rule 5     operandlist -> operand
+Rule 6     operand -> REGISTER
+Rule 7     operand -> NUMBER
+Rule 8     operand -> LABEL_REF
+
+Terminals, with rules where they appear
+
+COMMA                : 4
+INSTRUCTION          : 1 2 3
+LABEL_DEF            : 1
+LABEL_REF            : 8
+NUMBER               : 7
+REGISTER             : 6
+error                : 
+
+Nonterminals, with rules where they appear
+
+line                 : 0
+operand              : 4 5
+operandlist          : 1 2 4
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . line
+    (1) line -> . LABEL_DEF INSTRUCTION operandlist
+    (2) line -> . INSTRUCTION operandlist
+    (3) line -> . INSTRUCTION
+
+    LABEL_DEF       shift and go to state 2
+    INSTRUCTION     shift and go to state 3
+
+    line                           shift and go to state 1
+
+state 1
+
+    (0) S' -> line .
+
+
+
+state 2
+
+    (1) line -> LABEL_DEF . INSTRUCTION operandlist
+
+    INSTRUCTION     shift and go to state 4
+
+
+state 3
+
+    (2) line -> INSTRUCTION . operandlist
+    (3) line -> INSTRUCTION .
+    (4) operandlist -> . operandlist COMMA operand
+    (5) operandlist -> . operand
+    (6) operand -> . REGISTER
+    (7) operand -> . NUMBER
+    (8) operand -> . LABEL_REF
+
+    $end            reduce using rule 3 (line -> INSTRUCTION .)
+    REGISTER        shift and go to state 7
+    NUMBER          shift and go to state 8
+    LABEL_REF       shift and go to state 9
+
+    operandlist                    shift and go to state 5
+    operand                        shift and go to state 6
+
+state 4
+
+    (1) line -> LABEL_DEF INSTRUCTION . operandlist
+    (4) operandlist -> . operandlist COMMA operand
+    (5) operandlist -> . operand
+    (6) operand -> . REGISTER
+    (7) operand -> . NUMBER
+    (8) operand -> . LABEL_REF
+
+    REGISTER        shift and go to state 7
+    NUMBER          shift and go to state 8
+    LABEL_REF       shift and go to state 9
+
+    operandlist                    shift and go to state 10
+    operand                        shift and go to state 6
+
+state 5
+
+    (2) line -> INSTRUCTION operandlist .
+    (4) operandlist -> operandlist . COMMA operand
+
+    $end            reduce using rule 2 (line -> INSTRUCTION operandlist .)
+    COMMA           shift and go to state 11
+
+
+state 6
+
+    (5) operandlist -> operand .
+
+    COMMA           reduce using rule 5 (operandlist -> operand .)
+    $end            reduce using rule 5 (operandlist -> operand .)
+
+
+state 7
+
+    (6) operand -> REGISTER .
+
+    COMMA           reduce using rule 6 (operand -> REGISTER .)
+    $end            reduce using rule 6 (operand -> REGISTER .)
+
+
+state 8
+
+    (7) operand -> NUMBER .
+
+    COMMA           reduce using rule 7 (operand -> NUMBER .)
+    $end            reduce using rule 7 (operand -> NUMBER .)
+
+
+state 9
+
+    (8) operand -> LABEL_REF .
+
+    COMMA           reduce using rule 8 (operand -> LABEL_REF .)
+    $end            reduce using rule 8 (operand -> LABEL_REF .)
+
+
+state 10
+
+    (1) line -> LABEL_DEF INSTRUCTION operandlist .
+    (4) operandlist -> operandlist . COMMA operand
+
+    $end            reduce using rule 1 (line -> LABEL_DEF INSTRUCTION operandlist .)
+    COMMA           shift and go to state 11
+
+
+state 11
+
+    (4) operandlist -> operandlist COMMA . operand
+    (6) operand -> . REGISTER
+    (7) operand -> . NUMBER
+    (8) operand -> . LABEL_REF
+
+    REGISTER        shift and go to state 7
+    NUMBER          shift and go to state 8
+    LABEL_REF       shift and go to state 9
+
+    operand                        shift and go to state 12
+
+state 12
+
+    (4) operandlist -> operandlist COMMA operand .
+
+    COMMA           reduce using rule 4 (operandlist -> operandlist COMMA operand .)
+    $end            reduce using rule 4 (operandlist -> operandlist COMMA operand .)
+

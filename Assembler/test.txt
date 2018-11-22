@@ -1,0 +1,5 @@
+METHODS SECTION
+
+Workflow in building each component and steps I took to develop the overall product (first instruction set, then assembler, etc.)
+
+Send Mrs. Graves sample industry papers. 

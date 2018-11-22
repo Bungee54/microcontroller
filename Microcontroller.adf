@@ -40,9 +40,6 @@ Active_lib=
 [SpecTracer]
 WindowVisible=0
 
-[Groups]
-TestBench=1
-
 [HierarchyViewer]
 HierarchyInformation=
 ShowHide=ShowTopLevel
@@ -65,26 +62,6 @@ Name7=HTML
 Directory7=c:\My_Aldec_Designs\test_workspace\Microcontroller\
 Extension7=htm;html
 
-[Files]
-/memory.vhd=-1
-/register_file.vhd=-1
-/microcontroller_package.vhd=-1
-/alu.vhd=-1
-/cpu.vhd=-1
-/register_file_test.asdb=-1
-/register_file_test.awc=-1
-/alu_test.asdb=-1
-/alu_test.awc=-1
-/initial_RAM.txt=-1
-TestBench/cpu_TB.vhd=-1
-TestBench/register_file_TB.vhd=-1
-TestBench/memory_TB.vhd=-1
-TestBench/register_file_TB_runtest.do=-1
-TestBench/alu_TB.vhd=-1
-TestBench/alu_TB_runtest.do=-1
-TestBench/cpu_TB_runtest.do=-1
-TestBench/memory_TB_runtest.do=-1
-
 [Files.Data]
 .\src\memory.vhd=VHDL Source Code
 .\src\register_file.vhd=VHDL Source Code
@@ -96,7 +73,9 @@ TestBench/memory_TB_runtest.do=-1
 .\src\alu_test.asdb=Accelerated Waveform File
 .\src\alu_test.awc=Accelerated Waveform Configuration
 .\src\initial_RAM.txt=Text File
-.\src\ram_test_loadfromfile.awc=Accelerated Waveform Configuration
+.\src\memory_test.asdb=Accelerated Waveform File
+.\src\memory_test.awc=Accelerated Waveform Configuration
+.\src\initial_ROM.txt=Text File
 .\src\TestBench\cpu_TB.vhd=VHDL Test Bench
 .\src\TestBench\register_file_TB.vhd=VHDL Test Bench
 .\src\TestBench\memory_TB.vhd=VHDL Test Bench
@@ -105,4 +84,30 @@ TestBench/memory_TB_runtest.do=-1
 .\src\TestBench\alu_TB_runtest.do=Macro
 .\src\TestBench\cpu_TB_runtest.do=Macro
 .\src\TestBench\memory_TB_runtest.do=Macro
+
+[Groups]
+TestBench=1
+
+[Files]
+/memory.vhd=-1
+/register_file.vhd=-1
+/microcontroller_package.vhd=-1
+/alu.vhd=-1
+/cpu.vhd=-1
+/register_file_test.asdb=-1
+/register_file_test.awc=-1
+/alu_test.asdb=-1
+/alu_test.awc=-1
+/initial_ROM.txt=-1
+/initial_RAM.txt=-1
+/memory_test.asdb=-1
+/memory_test.awc=-1
+TestBench/cpu_TB.vhd=-1
+TestBench/register_file_TB.vhd=-1
+TestBench/memory_TB.vhd=-1
+TestBench/register_file_TB_runtest.do=-1
+TestBench/alu_TB.vhd=-1
+TestBench/alu_TB_runtest.do=-1
+TestBench/cpu_TB_runtest.do=-1
+TestBench/memory_TB_runtest.do=-1
 
