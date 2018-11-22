@@ -1,4 +1,4 @@
-146
+176
 ~E 1 "./../src/alu.vhd" 8 ALU
 ~A 1 "./../src/alu.vhd" 21 behavioral
 ~E 1 "./../src/TestBench/alu_TB.vhd" 8 alu_tb
@@ -7,15 +7,17 @@
 ~A 1 "./../src/cpu.vhd" 19 rtl
 ~E 1 "./../src/TestBench/cpu_TB.vhd" 7 cpu_tb
 ~A 1 "./../src/TestBench/cpu_TB.vhd" 10 TB_ARCHITECTURE
+~E 1 "./../src/memory.vhd" 10 memory
+~A 1 "./../src/memory.vhd" 22 structural
+~E 1 "./../src/TestBench/memory_TB.vhd" 8 memory_tb
+~A 1 "./../src/TestBench/memory_TB.vhd" 11 TB_ARCHITECTURE
+~E 1 "./../src/ram.vhd" 10 ram
+~A 1 "./../src/ram.vhd" 22 structural
 ~E 1 "./../src/register_file.vhd" 8 register_file
 ~A 1 "./../src/register_file.vhd" 20 behavioral
 ~E 1 "./../src/TestBench/register_file_TB.vhd" 7 register_file_tb
 ~A 1 "./../src/TestBench/register_file_TB.vhd" 10 TB_ARCHITECTURE
-~E 1 "./../src/synchronous_ram.vhd" 10 synchronous_ram
-~A 1 "./../src/synchronous_ram.vhd" 19 structural
-~E 1 "./../src/TestBench/synchronous_ram_TB.vhd" 7 synchronous_ram_tb
-~A 1 "./../src/TestBench/synchronous_ram_TB.vhd" 10 TB_ARCHITECTURE
 ~C 1 "./../src/TestBench/alu_TB.vhd" 161 testbench_for_alu
 ~C 1 "./../src/TestBench/cpu_TB.vhd" 60 testbench_for_cpu
+~C 1 "./../src/TestBench/memory_TB.vhd" 90 testbench_for_memory
 ~C 1 "./../src/TestBench/register_file_TB.vhd" 92 testbench_for_register_file
-~C 1 "./../src/TestBench/synchronous_ram_TB.vhd" 84 testbench_for_synchronous_ram

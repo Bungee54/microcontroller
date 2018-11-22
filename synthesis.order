@@ -1,5 +1,3 @@
-i<>.\src\synchronous_ram.vhd
-i<>.\src\TestBench\synchronous_ram_TB.vhd
 i<>.\src\alu.vhd
 i<>.\src\register_file.vhd
 i<>.\src\TestBench\register_file_TB.vhd
@@ -8,3 +6,4 @@ i<>.\src\cpu.vhd
 i<>.\src\TestBench\cpu_TB.vhd
 i<>.\graphics\cpu.bde
 i<>.\src\microcontroller_package.vhd
+i<>.\src\TestBench\memory_TB.vhd

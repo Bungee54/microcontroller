@@ -28,7 +28,10 @@ architecture rtl of cpu is
         FLAG_ZERO : out STD_LOGIC);
     end component;
 
-    component synchronous_ram port (
+    component memory
+    generic (
+        mem_file : STRING);
+    port (
         i_clk : in STD_LOGIC;
         i_address : in STD_LOGIC_VECTOR;
         i_rw : in STD_LOGIC;                -- '0'=read, '1'=write
@@ -47,7 +50,7 @@ architecture rtl of cpu is
     end component;
 
     signal r_status : STD_LOGIC_VECTOR(7 downto 0); -- Status register (zero, carry, neg, overflow, TBD, TBD, TBD, TBD) <- 7 downto 0
-    signal r_pc : STD_LOGIC_VECTOR(7 downto 0); -- Program counter
+    signal r_pc : STD_LOGIC_VECTOR(addr_size - 1 downto 0); -- Program counter
     signal r_ir : STD_LOGIC_VECTOR(word_size - 1 downto 0); -- Instruction register
     signal r_intern1 : STD_LOGIC_VECTOR(word_size - 1 downto 0);
 
@@ -56,9 +59,12 @@ architecture rtl of cpu is
     signal alu_opcode : STD_LOGIC_VECTOR(3 downto 0);
     signal alu_output : STD_LOGIC_VECTOR(7 downto 0);
 
-    signal sram_addr : STD_LOGIC_VECTOR(7 downto 0);
-    signal sram_data : STD_LOGIC_VECTOR(word_size - 1 downto 0);
-    signal sram_rw : STD_LOGIC;
+    signal ram_addr : STD_LOGIC_VECTOR(addr_size - 1 downto 0);
+    signal ram_data : STD_LOGIC_VECTOR(word_size - 1 downto 0);
+    signal ram_rw : STD_LOGIC;
+
+    signal rom_addr : STD_LOGIC_VECTOR(addr_size - 1 downto 0);
+    signal rom_data : STD_LOGIC_VECTOR(word_size - 1 downto 0);
 
     signal regf_raddr1 : STD_LOGIC_VECTOR(2 downto 0);
     signal regf_raddr2 : STD_LOGIC_VECTOR(2 downto 0);
@@ -89,12 +95,26 @@ begin
         FLAG_ZERO => r_status(7)
     );
 
-    comp_SRAM : SYNCHRONOUS_RAM
+    comp_RAM : MEMORY
+    generic map (
+        mem_file => "initial_RAM.txt"
+    )
     port map (
         i_clk => i_clk,
-        i_address => sram_addr,
-        i_rw => sram_rw,                -- '0'=read, '1'=write
-        io_data => sram_data
+        i_address => ram_addr,
+        i_rw => ram_rw,                -- '0'=read, '1'=write
+        io_data => ram_data
+    );
+
+    comp_ROM : MEMORY
+    generic map (
+        mem_file => "initial_ROM.txt"
+    )
+    port map (
+        i_clk => i_clk,
+        i_address => rom_addr,
+        i_rw => '0',                    -- We never write to ROM
+        io_data => rom_data
     );
 
     comp_REGFILE : REGISTER_FILE
@@ -119,9 +139,12 @@ begin
             alu_in2 <= (others => '0');
             alu_opcode <= (others => '0');
 
-            sram_addr <= (others => '0');
-            sram_data <= (others => 'Z');
-            sram_rw <= '0';
+            ram_addr <= (others => '0');
+            ram_data <= (others => 'Z');
+            ram_rw <= '0';
+
+            rom_addr <= (others => '0');
+            rom_data <= (others => 'Z');
 
             regf_raddr1 <= (others => '0');
             regf_raddr2 <= (others => '0');
@@ -133,22 +156,20 @@ begin
         end if;
 
         if (rising_edge(i_clk) and (not rising_edge(i_rst))) then
-            case ctrl_state is
-                when to_unsigned(0, 4) => -- Pre-read instruction
-                    sram_addr <= r_pc;
-                    sram_data <= "ZZZZZZZZ";
-                    sram_rw <= '0';
+            case to_integer(ctrl_state) is
+                when 0 => -- Pre-read instruction
+                    rom_addr <= r_pc;
                     ctrl_state <= ctrl_state + 1;
-                when to_unsigned(1, 4) => -- Fetch instruction
-                    r_ir <= sram_data;
+                when 1 => -- Fetch instruction
+                    r_ir <= rom_data;
                     ctrl_state <= ctrl_state + 1;
-                when to_unsigned(2, 4) => -- Increment r_pc
+                when 2 => -- Increment r_pc
                     r_pc <= r_pc + 1;
                     ctrl_state <= ctrl_state + 1;
-                when to_unsigned(3, 4) => -- Decode instruction in r_ir
-                    decode_instruction;
+                when 3 => -- Decode instruction in r_ir
+                    --decode_instruction;
                 when others =>
-                    ctrl_state <= to_unsigned(0, 4);
+                    ctrl_state <= to_unsigned(0, ctrl_state'high+1);
             end case;
         end if;
     end process RUN;

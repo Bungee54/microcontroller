@@ -1,9 +1,9 @@
-.\src\synchronous_ram.vhd
-.\src\alu.vhd
+.\src\memory.vhd
 .\src\register_file.vhd
-.\src\cpu.vhd
 .\src\microcontroller_package.vhd
-.\src\TestBench\synchronous_ram_TB.vhd
-.\src\TestBench\register_file_TB.vhd
-.\src\TestBench\alu_TB.vhd
+.\src\alu.vhd
+.\src\cpu.vhd
 .\src\TestBench\cpu_TB.vhd
+.\src\TestBench\register_file_TB.vhd
+.\src\TestBench\memory_TB.vhd
+.\src\TestBench\alu_TB.vhd
