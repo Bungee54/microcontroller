@@ -19,7 +19,7 @@ entity memory is
     );
 end memory;
 
-architecture structural of memory is
+architecture behavioral of memory is
     type MEM_T is array(0 to (2**i_address'length)-1) of STD_LOGIC_VECTOR(io_data'range);
     constant word_size : NATURAL := io_data'length;
 
@@ -60,4 +60,4 @@ begin
     end process UPDATE;
 
     io_data <= w_data;
-end structural;
+end behavioral;

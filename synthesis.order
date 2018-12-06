@@ -7,3 +7,5 @@ i<>.\src\TestBench\cpu_TB.vhd
 i<>.\graphics\cpu.bde
 i<>.\src\microcontroller_package.vhd
 i<>.\src\TestBench\memory_TB.vhd
+i<>.\src\instruction_fetch_LUT.vhd
+i<>.\src\TestBench\instruction_fetch_lut_TB.vhd

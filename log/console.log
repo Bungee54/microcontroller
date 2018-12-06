@@ -1,52 +1,552 @@
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# Error: Cannot find VHDL entity 'synchronous_ram_tb' in configuration 'testbench_for_synchronous_ram' from '' file.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# Error: Cannot find VHDL entity 'synchronous_ram_tb' in configuration 'testbench_for_synchronous_ram' from '' file.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd
+# ELBREAD: Error: The contents of package 'microcontroller.microcontroller_package' referenced in entity 'memory_tb' differ from the contents available during the compilation of this entity.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (171, 21): Unknown identifier "decode_instruction".
+# Error: COMP96_0066: cpu.vhd : (171, 21): Cannot find "decode_instruction" procedure declaration.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (20, 60): Expression expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (33, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (34, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (35, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (36, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (37, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (38, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (39, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (40, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (41, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (42, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (43, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (44, 18): Keyword 'others' expected.
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (45, 53): Expression expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (46, 9): Keyword 'case' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (49, 5): Keyword 'process' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (50, 0): Keyword 'end' expected.
+# Compile failure 17 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (33, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (34, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (35, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (36, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (37, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (38, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (39, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (40, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (41, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (42, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (43, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (44, 18): Keyword 'others' expected.
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (45, 53): Expression expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (46, 9): Keyword 'case' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (49, 5): Keyword 'process' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (50, 0): Keyword 'end' expected.
+# Compile failure 16 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (33, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (34, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (35, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (36, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (37, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (38, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (39, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (40, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (41, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (42, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (43, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (44, 18): Keyword 'others' expected.
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (45, 53): Expression expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0331: instruction_fetch_LUT.vhd : (33, 19): Syntax error in expression.
+# Error: COMP96_0015: instruction_fetch_LUT.vhd : (33, 25): ')' expected.
+# Error: COMP96_0049: instruction_fetch_LUT.vhd : (33, 29): Syntax error in expression.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (34, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (35, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (36, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (37, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (38, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (39, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (40, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (41, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (42, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (43, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (44, 18): Keyword 'others' expected.
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (45, 53): Expression expected.
+# Compile failure 15 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (33, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (34, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (35, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (36, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (37, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (38, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (39, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (40, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (41, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (42, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (43, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (44, 18): Keyword 'others' expected.
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (45, 53): Expression expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (33, 53): Expression expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (34, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (35, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (36, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (37, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (38, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (39, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (40, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (41, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (42, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (43, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (44, 18): Keyword 'others' expected.
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (45, 53): Expression expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (47, 5): Keyword 'case' expected.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (34, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (35, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (36, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (37, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (38, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (39, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (40, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (41, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (42, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (43, 18): Keyword 'others' expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (44, 18): Keyword 'others' expected.
+# Error: COMP96_0029: instruction_fetch_LUT.vhd : (45, 53): Expression expected.
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (47, 5): Keyword 'case' expected.
+# Compile failure 13 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0019: instruction_fetch_LUT.vhd : (47, 5): Keyword 'case' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
 # Compile Entity "memory"
 # Compile Architecture "structural" of Entity "memory"
-# Compile success 0 Errors 0 Warnings  Analysis time :  79.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+memory_tb memory_tb TB_ARCHITECTURE
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/microcontroller_package.vhd $dsn/src/TestBench/memory_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
 # File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
 # Compile Package "microcontroller_package"
+# Error: COMP96_0029: microcontroller_package.vhd : (15, 1): Expression expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (58, 5): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (183, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
 # File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
 # Compile Entity "memory_tb"
 # Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
 # Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile failure 3 Errors 0 Warnings  Analysis time :  1.0 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "structural" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (58, 5): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (183, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "structural" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (58, 5): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (183, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# Error: COMP96_0111: memory.vhd : (63, 5): Labels do not match.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (58, 5): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (183, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (58, 5): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (183, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (183, 21): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (59, 22): Unknown identifier "FETCH_REGFILE_T".
+# Error: COMP96_0064: cpu.vhd : (59, 22): Unknown type.
+# Error: COMP96_0078: cpu.vhd : (170, 27): Unknown identifier "REQ_INSTRUCTION".
+# Error: COMP96_0133: cpu.vhd : (170, 27): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (170, 27): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Error: COMP96_0078: cpu.vhd : (177, 22): Unknown identifier "REQ_INSTRUCTION".
+# Error: COMP96_0078: cpu.vhd : (179, 35): Unknown identifier "READ_INSTRUCTION".
+# Error: COMP96_0133: cpu.vhd : (179, 35): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (179, 35): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Error: COMP96_0078: cpu.vhd : (180, 22): Unknown identifier "READ_INSTRUCTION".
+# Error: COMP96_0078: cpu.vhd : (182, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (182, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (182, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (182, 47): Undefined type of expression. Expected type 'INTEGER'.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (170, 27): Unknown identifier "REQ_INSTRUCTION".
+# Error: COMP96_0133: cpu.vhd : (170, 27): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (170, 27): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Error: COMP96_0078: cpu.vhd : (177, 22): Unknown identifier "REQ_INSTRUCTION".
+# Error: COMP96_0078: cpu.vhd : (179, 35): Unknown identifier "READ_INSTRUCTION".
+# Error: COMP96_0133: cpu.vhd : (179, 35): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (179, 35): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Error: COMP96_0078: cpu.vhd : (180, 22): Unknown identifier "READ_INSTRUCTION".
+# Error: COMP96_0078: cpu.vhd : (182, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (182, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (182, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (182, 47): Undefined type of expression. Expected type 'INTEGER'.
+# Compile failure 12 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (182, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (182, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (182, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (182, 47): Undefined type of expression. Expected type 'INTEGER'.
+# Error: COMP96_0301: cpu.vhd : (175, 13): The choice 'others' must be present when all alternatives are not covered.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (182, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (182, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (182, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (182, 47): Undefined type of expression. Expected type 'INTEGER'.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Error: COMP96_0078: instruction_fetch_LUT.vhd : (15, 24): Unknown identifier "UNSIGNED".
+# Error: COMP96_0064: instruction_fetch_LUT.vhd : (15, 24): Unknown type.
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0078: instruction_fetch_LUT.vhd : (20, 28): Unknown identifier "UNSIGNED".
+# Error: COMP96_0064: instruction_fetch_LUT.vhd : (20, 28): Unknown type.
+# Error: COMP96_0077: instruction_fetch_LUT.vhd : (49, 22): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Error: COMP96_0055: instruction_fetch_LUT.vhd : (11, 10): Cannot find referenced context element "IEEE.std_numeric".
+# Error: COMP96_0078: instruction_fetch_LUT.vhd : (16, 24): Unknown identifier "UNSIGNED".
+# Error: COMP96_0064: instruction_fetch_LUT.vhd : (16, 24): Unknown type.
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Error: COMP96_0078: instruction_fetch_LUT.vhd : (21, 28): Unknown identifier "UNSIGNED".
+# Error: COMP96_0064: instruction_fetch_LUT.vhd : (21, 28): Unknown type.
+# Error: COMP96_0077: instruction_fetch_LUT.vhd : (50, 22): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/instruction_fetch_LUT.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (154, 36): ')' expected.
+# Error: COMP96_0015: cpu.vhd : (155, 9): ';' expected.
+# Error: COMP96_0019: cpu.vhd : (156, 5): Keyword 'end' expected.
+# Error: COMP96_0016: cpu.vhd : (156, 6): Design unit declaration expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0077: cpu.vhd : (183, 39): Undefined type of expression. Expected type 'UNRESOLVED_UNSIGNED'.
+# Error: COMP96_0078: cpu.vhd : (194, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (194, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (194, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (194, 47): Undefined type of expression. Expected type 'UNRESOLVED_UNSIGNED'.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0149: cpu.vhd : (183, 48): Explicit type conversions are allowed between closely related types only.
+# Error: COMP96_0367: cpu.vhd : (183, 39): Improper array length (0). Expected length is 2.
+# Error: COMP96_0078: cpu.vhd : (194, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (194, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (194, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (194, 47): Undefined type of expression. Expected type 'UNRESOLVED_UNSIGNED'.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0131: cpu.vhd : (183, 47): Illegal operand for type conversion.
+# Error: COMP96_0149: cpu.vhd : (183, 51): Explicit type conversions are allowed between closely related types only.
+# Error: COMP96_0367: cpu.vhd : (183, 39): Improper array length (0). Expected length is 2.
+# Error: COMP96_0078: cpu.vhd : (194, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (194, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (194, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (194, 47): Undefined type of expression. Expected type 'UNRESOLVED_UNSIGNED'.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0131: cpu.vhd : (183, 47): Illegal operand for type conversion.
+# Error: COMP96_0149: cpu.vhd : (183, 51): Explicit type conversions are allowed between closely related types only.
+# Error: COMP96_0367: cpu.vhd : (183, 39): Improper array length (0). Expected length is 2.
+# Error: COMP96_0078: cpu.vhd : (194, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (194, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (194, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (194, 47): Undefined type of expression. Expected type 'UNRESOLVED_UNSIGNED'.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (194, 47): Unknown identifier "num_fetch_table".
+# Error: COMP96_0133: cpu.vhd : (194, 47): Cannot find object declaration.
+# Error: COMP96_0289: cpu.vhd : (194, 47): Prefix of index must be an array.
+# Error: COMP96_0077: cpu.vhd : (194, 47): Undefined type of expression. Expected type 'UNRESOLVED_UNSIGNED'.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (157, 42): ')' expected.
+# Error: COMP96_0015: cpu.vhd : (158, 5): ';' expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
 # Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Fatal Error: ELAB2_0085 memory_TB.vhd (35): Length of actual parameter "i_address"(16) does not match the length of formal parameter "i_address" (8) (from entity "memory").
-# ELAB2: Last instance before error: /memory_tb/UUT
-# KERNEL: Error: E8005 : Kernel process initialization failed.
-# VSIM: Error: Simulation initialization failed.
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
 # Compile Entity "memory"
-# Compile Architecture "structural" of Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
 # File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
 # Compile Entity "register_file"
 # Compile Architecture "behavioral" of Entity "register_file"
@@ -58,6 +558,9 @@ acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/regist
 # File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
 # Compile Entity "cpu"
 # Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
 # File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
 # Compile Entity "cpu_tb"
 # Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
@@ -75,254 +578,27 @@ acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/regist
 # Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
 # Compile Configuration "TESTBENCH_FOR_alu"
 # Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
-# Compile Entity "memory"
-# Compile Architecture "structural" of Entity "memory"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
-# Compile Entity "register_file"
-# Compile Architecture "behavioral" of Entity "register_file"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
-# Compile Package "microcontroller_package"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
-# Compile Entity "ALU"
-# Compile Architecture "behavioral" of Entity "ALU"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
-# Compile Entity "cpu"
-# Compile Architecture "rtl" of Entity "cpu"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
-# Compile Entity "cpu_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
-# Compile Configuration "TESTBENCH_FOR_cpu"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
-# Compile Entity "register_file_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
-# Compile Configuration "TESTBENCH_FOR_register_file"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
-# Compile Entity "memory_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
-# Compile Configuration "TESTBENCH_FOR_memory"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
-# Compile Entity "alu_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
-# Compile Configuration "TESTBENCH_FOR_alu"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.6 [s]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+memory_tb memory_tb TB_ARCHITECTURE
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# ELAB2: Fatal Error: ELAB2_0130 memory.vhd (45): The size of array expression (8) does not match 16 expected for signal '/memory_tb/UUT/w_data'.
-# ELAB2: Last instance before error: /memory_tb/UUT
-# KERNEL: Error: E8005 : Kernel process initialization failed.
-# VSIM: Error: Simulation initialization failed.
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Error: COMP96_0071: TestBench/instruction_fetch_lut_TB.vhd : (37, 34): Operator "+" is not defined for such operands.
+# Error: COMP96_0077: TestBench/instruction_fetch_lut_TB.vhd : (37, 22): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Error: COMP96_0209: TestBench/instruction_fetch_lut_TB.vhd : (43, 6): Unknown architecture name used in configuration declaration.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
-# Compile Entity "memory"
-# Compile Architecture "structural" of Entity "memory"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
-# Compile Entity "register_file"
-# Compile Architecture "behavioral" of Entity "register_file"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
-# Compile Package "microcontroller_package"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
-# Compile Entity "ALU"
-# Compile Architecture "behavioral" of Entity "ALU"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
-# Compile Entity "cpu"
-# Compile Architecture "rtl" of Entity "cpu"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
-# Compile Entity "cpu_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
-# Compile Configuration "TESTBENCH_FOR_cpu"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
-# Compile Entity "register_file_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
-# Compile Configuration "TESTBENCH_FOR_register_file"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
-# Compile Entity "memory_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
-# Compile Configuration "TESTBENCH_FOR_memory"
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
-# Compile Entity "alu_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
-# Compile Configuration "TESTBENCH_FOR_alu"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.5 [s]
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-asim -O5 +access +r +m+memory_tb memory_tb TB_ARCHITECTURE
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.5 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 104517 kB (elbread=1280 elab2=102060 kernel=1176 sdf=0)
-# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
-#  9:20 PM, Wednesday, November 21, 2018
-#  Simulation has been initialized
-# 1 signal(s) traced.
-# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-run 5000ns
-# KERNEL: stopped at time: 5 us
-restart
+asim -O5 +access +r +m+instruction_fetch_lut_tb instruction_fetch_lut_tb TB_ARCHITECTURE
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 104517 kB (elbread=1280 elab2=102060 kernel=1176 sdf=0)
-# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
-#  9:27 PM, Wednesday, November 21, 2018
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
-run 5000ns
-# KERNEL: stopped at time: 5 us
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
-# Compile Entity "memory"
-# Compile Architecture "structural" of Entity "memory"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# EXECUTION:: ERROR  : STD_LOGIC_1164.HREAD End of string encountered
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.5 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 104517 kB (elbread=1280 elab2=102060 kernel=1176 sdf=0)
-# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
-#  9:37 PM, Wednesday, November 21, 2018
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
-run 5000ns
-# KERNEL: stopped at time: 5 us
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
-# Compile Entity "memory"
-# Compile Architecture "structural" of Entity "memory"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 104517 kB (elbread=1280 elab2=102060 kernel=1176 sdf=0)
-# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
-#  9:40 PM, Wednesday, November 21, 2018
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
-run 5000ns
-# KERNEL: stopped at time: 5 us
-run 1s
-acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
-# Compile Entity "memory"
-# Compile Architecture "structural" of Entity "memory"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.4 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 104517 kB (elbread=1280 elab2=102060 kernel=1176 sdf=0)
-# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
-#  9:43 PM, Wednesday, November 21, 2018
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
-run 1s
-endsim
-# KERNEL: stopped at time: 149435450 ns
-# VSIM: Simulation has finished.
+# ELBREAD: Elabo

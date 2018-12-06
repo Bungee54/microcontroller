@@ -1,7 +1,3 @@
-# MyMicroAssembly Assembler
-import asm_parser
-from asm_info import opcode_dict, instruction_aliases
-
 '''MyMicroAssembly Assembler
 MyMicroAssembly (MMA) functions on 16-bit words. 
 Each instruction is a word plus an (optional) extension word
@@ -45,6 +41,10 @@ Assembly Steps:
 2. Main assembly (instructions -> machine code)
 3. Postprocessing (label resolution, final output, etc.)
 '''
+
+import asm_parser
+from asm_info import opcode_dict, instruction_aliases
+
 
 # Will be filled with the assembly code.
 data = ''

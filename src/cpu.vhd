@@ -49,10 +49,21 @@ architecture rtl of cpu is
         );
     end component;
 
+    component instruction_fetch_lut port (
+        i_opcode7 : in STD_LOGIC_VECTOR(opcode_size - 1 downto 0); -- Opcode to look up (5-bit main opcode and 2-bit flag section)
+        o_num_fetches : out UNSIGNED(1 downto 0) -- Set to the LUT result
+        );
+    end component;
+
     signal r_status : STD_LOGIC_VECTOR(7 downto 0); -- Status register (zero, carry, neg, overflow, TBD, TBD, TBD, TBD) <- 7 downto 0
     signal r_pc : STD_LOGIC_VECTOR(addr_size - 1 downto 0); -- Program counter
     signal r_ir : STD_LOGIC_VECTOR(word_size - 1 downto 0); -- Instruction register
-    signal r_intern1 : STD_LOGIC_VECTOR(word_size - 1 downto 0);
+    signal r_opcode_alias : STD_LOGIC_VECTOR(opcode_size - 1 downto 0) -- Points to opcode section of r_ir (first few bits of instruction)
+        := r_ir(r_ir'left downto (r_ir'left - (opcode_size - 1)));
+
+    type T_FETCH_REGFILE is array(0 to num_fetch_registers - 1) of STD_LOGIC_VECTOR(word_size - 1 downto 0);
+    signal r_fetch : T_FETCH_REGFILE; -- Holds extra information such as immediate addresses and their contents
+                                                   -- Space for 2 words of information.
 
     signal alu_in1 : STD_LOGIC_VECTOR(7 downto 0);
     signal alu_in2 : STD_LOGIC_VECTOR(7 downto 0);
@@ -74,13 +85,25 @@ architecture rtl of cpu is
     signal regf_rdata1 : STD_LOGIC_VECTOR(7 downto 0);
     signal regf_rdata2 : STD_LOGIC_VECTOR(7 downto 0);
 
-    signal ctrl_state : unsigned(3 downto 0);
-        -- STATE 0: Pre-read instruction
-        -- STATE 1: Fetch instruction
-        -- STATE 2: Advance r_pc
-        -- ...
+    signal fetch_lut_result : UNSIGNED(1 downto 0);
 
-    constant c_STATE_MAX : unsigned(ctrl_state'range) := to_unsigned(3, ctrl_state'left+1);
+    type T_CPU_STATE is (
+        -- FETCH Phase
+        FETCH_REQ_INSTRUCTION,
+        FETCH_READ_INSTRUCTION,
+
+        -- DECODE Phase
+        DECODE_REQ_EXTENSION,
+        DECODE_READ_EXTENSION,
+        DECODE_REQ_EFFECTIVE,
+        DECODE_READ_EFFECTIVE,
+
+        -- EXECUTE Phase
+        EXEC_CALCULATE,
+        EXEC_STORE
+    );
+    signal ctrl_state : T_CPU_STATE;
+    signal ctrl_fetches_remaining : UNSIGNED(1 downto 0);
 
 begin
     comp_ALU : ALU
@@ -128,6 +151,12 @@ begin
         o_data2 => regf_rdata2 -- Contents of address @ second register
     );
 
+    comp_FETCH_LUT : INSTRUCTION_FETCH_LUT
+    port map (
+        i_opcode7 => r_opcode_alias,
+        o_num_fetches => fetch_lut_result
+    );
+
     RUN : process (i_clk, i_rst)
     begin
         if (rising_edge(i_rst)) then -- Reset
@@ -152,24 +181,26 @@ begin
             regf_wdata <= (others => '0');
             regf_rw <= '0';
 
-            ctrl_state <= to_unsigned(0, ctrl_state'left+1);
-        end if;
+            ctrl_state <= FETCH_REQ_INSTRUCTION;
+            ctrl_fetches_remaining <= to_unsigned(0, ctrl_fetches_remaining'length);
+        elsif (rising_edge(i_clk)) then
 
-        if (rising_edge(i_clk) and (not rising_edge(i_rst))) then
-            case to_integer(ctrl_state) is
-                when 0 => -- Pre-read instruction
-                    rom_addr <= r_pc;
-                    ctrl_state <= ctrl_state + 1;
-                when 1 => -- Fetch instruction
-                    r_ir <= rom_data;
-                    ctrl_state <= ctrl_state + 1;
-                when 2 => -- Increment r_pc
-                    r_pc <= r_pc + 1;
-                    ctrl_state <= ctrl_state + 1;
-                when 3 => -- Decode instruction in r_ir
-                    --decode_instruction;
+            -- CPU CONTROL LOGIC
+            case ctrl_state is
+                -- FETCH Phase
+                when FETCH_REQ_INSTRUCTION =>
+                    rom_addr <= r_pc;                       -- Ask ROM for instruction
+                    ctrl_state <= FETCH_READ_INSTRUCTION;
+                when FETCH_READ_INSTRUCTION =>
+                    r_ir <= rom_data;                       -- Read instruction from ROM next cycle
+                    ctrl_fetches_remaining <= fetch_lut_result;
+                    ctrl_state <= DECODE_REQ_EXTENSION;
+
+                -- DECODE Phase
+                when DECODE_REQ_EXTENSION =>
+
                 when others =>
-                    ctrl_state <= to_unsigned(0, ctrl_state'high+1);
+
             end case;
         end if;
     end process RUN;

@@ -24,7 +24,7 @@ LANGUAGE=VHDL
 FLOWTOOLS=NONE
 REFRESH_FLOW=1
 FAMILY=
-fileopenfolder=C:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench
+fileopenfolder=C:\My_Aldec_Designs\test_workspace\Microcontroller\src
 
 [LocalVerilogSets]
 EnableSLP=1
@@ -62,29 +62,6 @@ Name7=HTML
 Directory7=c:\My_Aldec_Designs\test_workspace\Microcontroller\
 Extension7=htm;html
 
-[Files.Data]
-.\src\memory.vhd=VHDL Source Code
-.\src\register_file.vhd=VHDL Source Code
-.\src\microcontroller_package.vhd=VHDL Source Code
-.\src\alu.vhd=VHDL Source Code
-.\src\cpu.vhd=VHDL Source Code
-.\src\register_file_test.asdb=Accelerated Waveform File
-.\src\register_file_test.awc=Accelerated Waveform Configuration
-.\src\alu_test.asdb=Accelerated Waveform File
-.\src\alu_test.awc=Accelerated Waveform Configuration
-.\src\initial_RAM.txt=Text File
-.\src\memory_test.asdb=Accelerated Waveform File
-.\src\memory_test.awc=Accelerated Waveform Configuration
-.\src\initial_ROM.txt=Text File
-.\src\TestBench\cpu_TB.vhd=VHDL Test Bench
-.\src\TestBench\register_file_TB.vhd=VHDL Test Bench
-.\src\TestBench\memory_TB.vhd=VHDL Test Bench
-.\src\TestBench\register_file_TB_runtest.do=Macro
-.\src\TestBench\alu_TB.vhd=VHDL Test Bench
-.\src\TestBench\alu_TB_runtest.do=Macro
-.\src\TestBench\cpu_TB_runtest.do=Macro
-.\src\TestBench\memory_TB_runtest.do=Macro
-
 [Groups]
 TestBench=1
 
@@ -102,6 +79,7 @@ TestBench=1
 /initial_RAM.txt=-1
 /memory_test.asdb=-1
 /memory_test.awc=-1
+/instruction_fetch_LUT.vhd=-1
 TestBench/cpu_TB.vhd=-1
 TestBench/register_file_TB.vhd=-1
 TestBench/memory_TB.vhd=-1
@@ -110,4 +88,32 @@ TestBench/alu_TB.vhd=-1
 TestBench/alu_TB_runtest.do=-1
 TestBench/cpu_TB_runtest.do=-1
 TestBench/memory_TB_runtest.do=-1
+TestBench/instruction_fetch_lut_TB.vhd=-1
+TestBench/instruction_fetch_lut_TB_runtest.do=-1
 
+[Files.Data]
+.\src\memory.vhd=VHDL Source Code
+.\src\register_file.vhd=VHDL Source Code
+.\src\microcontroller_package.vhd=VHDL Source Code
+.\src\alu.vhd=VHDL Source Code
+.\src\cpu.vhd=VHDL Source Code
+.\src\register_file_test.asdb=Accelerated Waveform File
+.\src\register_file_test.awc=Accelerated Waveform Configuration
+.\src\alu_test.asdb=Accelerated Waveform File
+.\src\alu_test.awc=Accelerated Waveform Configuration
+.\src\initial_ROM.txt=Text File
+.\src\initial_RAM.txt=Text File
+.\src\memory_test.asdb=Accelerated Waveform File
+.\src\memory_test.awc=Accelerated Waveform Configuration
+.\src\instruction_fetch_LUT.vhd=VHDL Source Code
+.\src\TestBench\cpu_TB.vhd=VHDL Test Bench
+.\src\TestBench\register_file_TB.vhd=VHDL Test Bench
+.\src\TestBench\memory_TB.vhd=VHDL Test Bench
+.\src\TestBench\register_file_TB_runtest.do=Macro
+.\src\TestBench\alu_TB.vhd=VHDL Test Bench
+.\src\TestBench\alu_TB_runtest.do=Macro
+.\src\TestBench\cpu_TB_runtest.do=Macro
+.\src\TestBench\memory_TB_runtest.do=Macro
+
+.\src\TestBench\instruction_fetch_lut_TB.vhd=VHDL Test Bench
+.\src\TestBench\instruction_fetch_lut_TB_runtest.do=Macro
