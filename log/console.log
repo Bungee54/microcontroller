@@ -601,4 +601,1984 @@ acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/TestBench/instruction_fetc
 # ELBREAD: Elaboration time 0.0 [s].
 asim -O5 +access +r +m+instruction_fetch_lut_tb instruction_fetch_lut_tb TB_ARCHITECTURE
 # ELBREAD: Elaboration process.
-# ELBREAD: Elabo
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6079 kB (elbread=1280 elab2=4649 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  5:35 PM, Thursday, December 6, 2018
+#  Simulation has been initialized
+# 1 signal(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+# 1 signal(s) traced.
+run 3000ns
+# KERNEL: stopped at time: 3 us
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.7 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (174, 17): ';' expected.
+# Error: COMP96_0019: cpu.vhd : (233, 9): Keyword 'process' expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (233, 9): Keyword 'process' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (175, 35): Unknown identifier "EXEC_BEGIN".
+# Error: COMP96_0133: cpu.vhd : (175, 35): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (175, 35): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Error: COMP96_0138: cpu.vhd : (193, 25): The index types in the reference to the array object are incompatible with its range type.
+# Error: COMP96_0078: cpu.vhd : (197, 35): Unknown identifier "EXEC_BEGIN".
+# Error: COMP96_0133: cpu.vhd : (197, 35): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (197, 35): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Compile failure 7 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0138: cpu.vhd : (193, 25): The index types in the reference to the array object are incompatible with its range type.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: ELBWRITE_0028: cpu.vhd : (191, 0): The unresolved signal "ctrl_state" received values from multiple sources at 191 and 169 lines.
+# Error: ELBWRITE_0028: cpu.vhd : (229, 0): The unresolved signal "ctrl_state" received values from multiple sources at 229 and 169 lines.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0028: cpu.vhd : (161, 20): Identifier or keyword expected.
+# Error: COMP96_0015: cpu.vhd : (164, 9): ';' expected.
+# Error: COMP96_0016: cpu.vhd : (164, 17): Design unit declaration expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (161, 5): Keyword 'end' expected.
+# Error: COMP96_0016: cpu.vhd : (161, 15): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (161, 5): Keyword 'end' expected.
+# Error: COMP96_0016: cpu.vhd : (161, 15): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (161, 5): Keyword 'end' expected.
+# Error: COMP96_0016: cpu.vhd : (161, 15): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (161, 5): Keyword 'end' expected.
+# Error: COMP96_0016: cpu.vhd : (161, 15): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (161, 5): Keyword 'end' expected.
+# Error: COMP96_0016: cpu.vhd : (161, 15): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (174, 17): Unknown identifier "CHANGE_STATE".
+# Error: COMP96_0066: cpu.vhd : (174, 17): Cannot find "CHANGE_STATE" procedure declaration.
+# Error: COMP96_0078: cpu.vhd : (180, 21): Unknown identifier "CHANGE_STATE".
+# Error: COMP96_0066: cpu.vhd : (180, 21): Cannot find "CHANGE_STATE" procedure declaration.
+# Error: COMP96_0078: cpu.vhd : (182, 21): Unknown identifier "CHANGE_STATE".
+# Error: COMP96_0066: cpu.vhd : (182, 21): Cannot find "CHANGE_STATE" procedure declaration.
+# Error: COMP96_0078: cpu.vhd : (196, 17): Unknown identifier "CHANGE_STATE".
+# Error: COMP96_0066: cpu.vhd : (196, 17): Cannot find "CHANGE_STATE" procedure declaration.
+# Error: COMP96_0078: cpu.vhd : (202, 21): Unknown identifier "CHANGE_STATE".
+# Error: COMP96_0066: cpu.vhd : (202, 21): Cannot find "CHANGE_STATE" procedure declaration.
+# Error: COMP96_0078: cpu.vhd : (204, 21): Unknown identifier "CHANGE_STATE".
+# Error: COMP96_0066: cpu.vhd : (204, 21): Cannot find "CHANGE_STATE" procedure declaration.
+# Error: COMP96_0078: cpu.vhd : (234, 13): Unknown identifier "CHANGE_STATE".
+# Error: COMP96_0066: cpu.vhd : (234, 13): Cannot find "CHANGE_STATE" procedure declaration.
+# Compile failure 14 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (161, 5): Keyword 'end' expected.
+# Error: COMP96_0016: cpu.vhd : (161, 15): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  31.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0161: cpu.vhd : (111, 9): The target of this assignment must be a formal of the subprogram "CHANGE_STATE" or one of its parents.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/cpu.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0077: cpu.vhd : (180, 31): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Error: COMP96_0077: cpu.vhd : (203, 31): Undefined type of expression. Expected type 'T_CPU_STATE'.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# Error: COMP96_0078: register_file.vhd : (22, 40): Unknown identifier "num_general_registers".
+# Error: COMP96_0133: register_file.vhd : (22, 40): Cannot find object declaration.
+# Error: COMP96_0094: register_file.vhd : (22, 40): Locally static expression is required in the range definition.
+# Error: COMP96_0081: register_file.vhd : (22, 35): Enumeration or integer type expected.
+# Error: COMP96_0248: register_file.vhd : (22, 35): Index constraint in the constrained array definition is invalid.
+# Error: COMP96_0078: register_file.vhd : (23, 24): Unknown identifier "REGISTER_FILE_T".
+# Error: COMP96_0064: register_file.vhd : (23, 24): Unknown type.
+# Error: COMP96_0289: register_file.vhd : (28, 13): Prefix of index must be an array.
+# Error: COMP96_0289: register_file.vhd : (34, 16): Prefix of index must be an array.
+# Error: COMP96_0077: register_file.vhd : (34, 16): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0289: register_file.vhd : (35, 16): Prefix of index must be an array.
+# Error: COMP96_0077: register_file.vhd : (35, 16): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Error: COMP96_0078: alu.vhd : (10, 33): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (10, 33): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (10, 33): Locally static expression is required in the range definition.
+# Error: COMP96_0078: alu.vhd : (11, 33): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (11, 33): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (11, 33): Locally static expression is required in the range definition.
+# Error: COMP96_0078: alu.vhd : (13, 34): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (13, 34): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (13, 34): Locally static expression is required in the range definition.
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (175, 27): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 33): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 38): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 41): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 43): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 48): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 51): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 63): '<=' expected.
+# Error: COMP96_0015: cpu.vhd : (222, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 30 Errors 0 Warnings  Analysis time :  1.0 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/microcontroller_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# Error: COMP96_0367: register_file.vhd : (28, 57): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: register_file.vhd : (34, 16): Improper array length (16). Expected length is 8.
+# Error: COMP96_0367: register_file.vhd : (35, 16): Improper array length (16). Expected length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Error: COMP96_0078: alu.vhd : (10, 33): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (10, 33): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (10, 33): Locally static expression is required in the range definition.
+# Error: COMP96_0078: alu.vhd : (11, 33): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (11, 33): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (11, 33): Locally static expression is required in the range definition.
+# Error: COMP96_0078: alu.vhd : (13, 34): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (13, 34): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (13, 34): Locally static expression is required in the range definition.
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (175, 27): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 33): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 38): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 41): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 43): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 48): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 51): ';' expected.
+# Error: COMP96_0015: cpu.vhd : (175, 63): '<=' expected.
+# Error: COMP96_0015: cpu.vhd : (222, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 21 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Error: COMP96_0078: alu.vhd : (10, 33): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (10, 33): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (10, 33): Locally static expression is required in the range definition.
+# Error: COMP96_0078: alu.vhd : (11, 33): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (11, 33): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (11, 33): Locally static expression is required in the range definition.
+# Error: COMP96_0078: alu.vhd : (13, 34): Unknown identifier "word_size".
+# Error: COMP96_0133: alu.vhd : (13, 34): Cannot find object declaration.
+# Error: COMP96_0094: alu.vhd : (13, 34): Locally static expression is required in the range definition.
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (221, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 16 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0015: cpu.vhd : (221, 21): ';' expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 13 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0367: cpu.vhd : (119, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (120, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (122, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (156, 19): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (158, 20): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (159, 20): Improper array length (8). Expected length is 16.
+# Error: COMP96_0138: cpu.vhd : (234, 29): The index types in the reference to the array object are incompatible with its range type.
+# Error: COMP96_0078: cpu.vhd : (249, 48): Unknown identifier "ir_addr_A".
+# Error: COMP96_0133: cpu.vhd : (249, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (249, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (250, 48): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (250, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (250, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (254, 47): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (254, 47): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (254, 47): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0301: cpu.vhd : (247, 25): The choice 'others' must be present when all alternatives are not covered.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 29 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0367: cpu.vhd : (156, 19): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (158, 20): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (159, 20): Improper array length (8). Expected length is 16.
+# Error: COMP96_0138: cpu.vhd : (234, 29): The index types in the reference to the array object are incompatible with its range type.
+# Error: COMP96_0078: cpu.vhd : (249, 48): Unknown identifier "ir_addr_A".
+# Error: COMP96_0133: cpu.vhd : (249, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (249, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (250, 48): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (250, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (250, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0367: cpu.vhd : (251, 44): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: cpu.vhd : (252, 44): Improper array length (8). Expected length is 16.
+# Error: COMP96_0078: cpu.vhd : (254, 47): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (254, 47): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (254, 47): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0367: cpu.vhd : (255, 47): Improper array length (16). Expected length is 8.
+# Error: COMP96_0301: cpu.vhd : (247, 25): The choice 'others' must be present when all alternatives are not covered.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 29 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0138: cpu.vhd : (234, 29): The index types in the reference to the array object are incompatible with its range type.
+# Error: COMP96_0078: cpu.vhd : (249, 48): Unknown identifier "ir_addr_A".
+# Error: COMP96_0133: cpu.vhd : (249, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (249, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (250, 48): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (250, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (250, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (254, 47): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (254, 47): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (254, 47): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0301: cpu.vhd : (247, 25): The choice 'others' must be present when all alternatives are not covered.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 23 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (249, 48): Unknown identifier "ir_addr_A".
+# Error: COMP96_0133: cpu.vhd : (249, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (249, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (250, 48): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (250, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (250, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (254, 47): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (254, 47): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (254, 47): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0301: cpu.vhd : (247, 25): The choice 'others' must be present when all alternatives are not covered.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 22 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (249, 48): Unknown identifier "ir_addr_A".
+# Error: COMP96_0133: cpu.vhd : (249, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (249, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (250, 48): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (250, 48): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (250, 48): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# Error: COMP96_0078: cpu.vhd : (254, 47): Unknown identifier "ir_addr_B".
+# Error: COMP96_0133: cpu.vhd : (254, 47): Cannot find object declaration.
+# Error: COMP96_0077: cpu.vhd : (254, 47): Undefined type of expression. Expected type 'STD_ULOGIC_VECTOR'.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 21 Errors 0 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 12 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 6 Errors 1 Warnings  Analysis time :  0.5 [s]
+# Replacing 7 downto 0 with word_size - 1 downto 0
+# 
+# c:/My_Aldec_Designs/test_workspace/Microcontroller/src/cpu.vhd: replaced 4 occurrences
+# c:/My_Aldec_Designs/test_workspace/Microcontroller/src/TestBench/alu_TB.vhd: replaced 6 occurrences
+# 10 occurrence(s) were replaced
+# 
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0367: cpu.vhd : (175, 25): Improper array length (8). Expected length is 16.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Error: ELAB1_0028: TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. i_input length is 8.
+# Error: ELAB1_0028: TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. o_output length is 8.
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# Error: ELAB1_0028: ../src/TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. i_input length is 8.
+# Error: ELAB1_0028: ../src/TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. o_output length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (15, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (15, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (15, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (16, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (16, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (16, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (18, 28): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (18, 28): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (18, 28): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (26, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (26, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (26, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (27, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (27, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (27, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (30, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (30, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (30, 30): Locally static expression is required in the range definition.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 26 Errors 1 Warnings  Analysis time :  0.4 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Error: ELAB1_0028: TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. i_input length is 8.
+# Error: ELAB1_0028: TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. o_output length is 8.
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# Error: ELAB1_0028: ../src/TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. i_input length is 8.
+# Error: ELAB1_0028: ../src/TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. o_output length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (15, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (15, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (15, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (16, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (16, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (16, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (18, 28): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (18, 28): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (18, 28): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (26, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (26, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (26, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (27, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (27, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (27, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (30, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (30, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (30, 30): Locally static expression is required in the range definition.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 25 Errors 1 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Error: COMP96_0078: TestBench/cpu_TB.vhd : (16, 33): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/cpu_TB.vhd : (16, 33): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/cpu_TB.vhd : (16, 33): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/cpu_TB.vhd : (17, 35): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/cpu_TB.vhd : (17, 35): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/cpu_TB.vhd : (17, 35): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/cpu_TB.vhd : (23, 36): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/cpu_TB.vhd : (23, 36): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/cpu_TB.vhd : (23, 36): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/cpu_TB.vhd : (25, 37): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/cpu_TB.vhd : (25, 37): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/cpu_TB.vhd : (25, 37): Locally static expression is required in the range definition.
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# Error: ELAB1_0028: ../src/TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. i_input length is 8.
+# Error: ELAB1_0028: ../src/TestBench/cpu_TB.vhd : (32, 0): Entity port length is 16. o_output length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (15, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (15, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (15, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (16, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (16, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (16, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (18, 28): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (18, 28): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (18, 28): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (26, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (26, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (26, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (27, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (27, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (27, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (30, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (30, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (30, 30): Locally static expression is required in the range definition.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 35 Errors 1 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (15, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (15, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (15, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (16, 27): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (16, 27): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (16, 27): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (18, 28): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (18, 28): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (18, 28): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (26, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (26, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (26, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (27, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (27, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (27, 30): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/alu_TB.vhd : (30, 30): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/alu_TB.vhd : (30, 30): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/alu_TB.vhd : (30, 30): Locally static expression is required in the range definition.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. A length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. B length is 8.
+# Error: ELAB1_0028: ../src/TestBench/alu_TB.vhd : (41, 0): Entity port length is 16. Y length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 21 Errors 1 Warnings  Analysis time :  0.5 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (58, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (59, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (70, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (78, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (79, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (84, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (85, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (90, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (91, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (99, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (100, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (105, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (110, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (115, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (120, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (125, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (126, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (131, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (132, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (137, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (138, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (143, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (148, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (149, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (154, 14): Improper array length (8). Expected length is 16.
+# Error: COMP96_0367: TestBench/alu_TB.vhd : (155, 14): Improper array length (8). Expected length is 16.
+# Compile Configuration "TESTBENCH_FOR_alu"
+# Error: VLM_0009: TestBench/alu_TB.vhd : (163, 6): Architecture TB_ARCHITECTURE must be recompiled because entity microcontroller.alu_tb has changed.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 27 Errors 1 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.7 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Warning: COMP96_0003: Source file "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" is empty.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 1 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (17, 32): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (17, 32): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/register_file_TB.vhd : (17, 32): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (19, 34): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (19, 34): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/register_file_TB.vhd : (19, 34): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (20, 34): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (20, 34): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/register_file_TB.vhd : (20, 34): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (27, 35): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (27, 35): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/register_file_TB.vhd : (27, 35): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (30, 36): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (30, 36): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/register_file_TB.vhd : (30, 36): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (31, 36): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (31, 36): Cannot find object declaration.
+# Error: COMP96_0094: TestBench/register_file_TB.vhd : (31, 36): Locally static expression is required in the range definition.
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (60, 51): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (60, 51): Cannot find object declaration.
+# Error: COMP96_0104: TestBench/register_file_TB.vhd : (60, 51): Undefined type of expression.
+# Error: COMP96_0078: TestBench/register_file_TB.vhd : (65, 61): Unknown identifier "word_size".
+# Error: COMP96_0133: TestBench/register_file_TB.vhd : (65, 61): Cannot find object declaration.
+# Error: COMP96_0104: TestBench/register_file_TB.vhd : (65, 61): Undefined type of expression.
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. i_data length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data1 length is 8.
+# Error: ELAB1_0028: ../src/TestBench/register_file_TB.vhd : (38, 0): Entity port length is 16. o_data2 length is 8.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 27 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.7 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.7 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+cpu_tb cpu_tb TB_ARCHITECTURE
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 1.2 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 200786 kB (elbread=1280 elab2=198329 kernel=1177 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  9:55 PM, Friday, December 7, 2018
+#  Simulation has been initialized
+# 1 signal(s) traced.
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+run 3000ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__34.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__35.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_RAM,  Process: UPDATE.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_ROM,  Process: UPDATE.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 10 ns,  Iteration: 2,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: stopped at time: 3 us
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 200786 kB (elbread=1280 elab2=198329 kernel=1177 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  9:59 PM, Friday, December 7, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 3000ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__34.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__35.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_RAM,  Process: UPDATE.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_ROM,  Process: UPDATE.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 10 ns,  Iteration: 2,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: stopped at time: 3 us
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 200786 kB (elbread=1280 elab2=198329 kernel=1177 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  10:00 PM, Friday, December 7, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 3000ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__34.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__35.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_RAM,  Process: UPDATE.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_ROM,  Process: UPDATE.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 10 ns,  Iteration: 2,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: stopped at time: 3 us
+# 3 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 200786 kB (elbread=1280 elab2=198329 kernel=1177 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  10:01 PM, Friday, December 7, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 3000ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__34.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__35.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_RAM,  Process: UPDATE.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_ROM,  Process: UPDATE.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 10 ns,  Iteration: 2,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: stopped at time: 3 us
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0019: cpu.vhd : (64, 9): Keyword 'begin' expected.
+# Error: COMP96_0016: cpu.vhd : (64, 12): Design unit declaration expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# Error: COMP96_0078: cpu.vhd : (164, 22): Unknown identifier "ir_opcode".
+# Error: COMP96_0133: cpu.vhd : (164, 22): Cannot find object declaration.
+# Error: COMP96_0104: cpu.vhd : (164, 9): Undefined type of expression.
+# Error: COMP96_0078: cpu.vhd : (247, 30): Unknown identifier "ir_opcode".
+# Error: COMP96_0133: cpu.vhd : (247, 30): Cannot find object declaration.
+# Error: COMP96_0584: cpu.vhd : (247, 30): Cannot determine the type of the case expression. Enumeration type, integer type, or one-dimensional array of characters expected.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.6 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.8 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.7 [s]
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.7 [s]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 200786 kB (elbread=1280 elab2=198329 kernel=1177 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  10:20 PM, Friday, December 7, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 3000ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__34.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__35.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_RAM,  Process: UPDATE.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_ROM,  Process: UPDATE.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 10 ns,  Iteration: 2,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: stopped at time: 3 us
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+# 1 signal(s) traced.
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 200786 kB (elbread=1280 elab2=198329 kernel=1177 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  10:21 PM, Friday, December 7, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 3000ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__34.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__35.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_RAM,  Process: UPDATE.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_ROM,  Process: UPDATE.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 10 ns,  Iteration: 2,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: stopped at time: 3 us
+acom -O3 -e 100 -work Microcontroller -2008  $dsn/src/memory.vhd $dsn/src/register_file.vhd $dsn/src/microcontroller_package.vhd $dsn/src/alu.vhd $dsn/src/cpu.vhd $dsn/src/instruction_fetch_LUT.vhd $dsn/src/TestBench/cpu_TB.vhd $dsn/src/TestBench/register_file_TB.vhd $dsn/src/TestBench/memory_TB.vhd $dsn/src/TestBench/alu_TB.vhd $dsn/src/TestBench/instruction_fetch_lut_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd
+# Compile Entity "memory"
+# Compile Architecture "behavioral" of Entity "memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd
+# Compile Entity "register_file"
+# Compile Architecture "behavioral" of Entity "register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd
+# Compile Package "microcontroller_package"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd
+# Compile Entity "ALU"
+# Compile Architecture "behavioral" of Entity "ALU"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+# Compile Entity "cpu"
+# Compile Architecture "rtl" of Entity "cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd
+# Compile Entity "instruction_fetch_LUT"
+# Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd
+# Compile Entity "cpu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"
+# Compile Configuration "TESTBENCH_FOR_cpu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd
+# Compile Entity "register_file_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"
+# Compile Configuration "TESTBENCH_FOR_register_file"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd
+# Compile Entity "memory_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"
+# Compile Configuration "TESTBENCH_FOR_memory"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd
+# Compile Entity "alu_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"
+# Compile Configuration "TESTBENCH_FOR_alu"
+# File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd
+# Compile Entity "instruction_fetch_lut_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"
+# Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.7 [s]
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.9 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 200786 kB (elbread=1280 elab2=198329 kernel=1177 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Aldec_Designs\test_workspace\Microcontroller\src\wave.asdb
+#  10:22 PM, Friday, December 7, 2018
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'c:/My_Aldec_Designs/test_workspace/Microcontroller/src/wave.asdb'.
+run 3000ns
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_ALU,  Process: SET_FLAGS.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__34.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /cpu_tb/UUT/comp_REGFILE,  Process: line__35.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_RAM,  Process: UPDATE.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 1,  Instance: /cpu_tb/UUT/comp_ROM,  Process: UPDATE.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the 

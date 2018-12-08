@@ -4,13 +4,14 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
+use microcontroller_package.all;
 
 entity ALU is
     port (
-        A : in STD_LOGIC_VECTOR(7 downto 0);
-        B : in STD_LOGIC_VECTOR(7 downto 0);
+        A : in STD_LOGIC_VECTOR(word_size - 1 downto 0);
+        B : in STD_LOGIC_VECTOR(word_size - 1 downto 0);
         OPCODE : in STD_LOGIC_VECTOR(3 downto 0);
-        Y : out STD_LOGIC_VECTOR(7 downto 0);
+        Y : out STD_LOGIC_VECTOR(word_size - 1 downto 0);
         FLAG_CARRY : out STD_LOGIC;
         FLAG_OVERFLOW : out STD_LOGIC;
         FLAG_NEGATIVE : out STD_LOGIC;
@@ -46,7 +47,7 @@ begin
     begin
         if (OPCODE = "0000" or OPCODE = "0001") then
             FLAG_CARRY <= Y_ext(Y_ext'left);
-            if ((A(7) = B(7)) and (Y(7) /= A(7))) then
+            if ((A(A'left) = B(B'left)) and (Y(Y'left) /= A(A'left))) then
                 FLAG_OVERFLOW <= '1';
             else
                 FLAG_OVERFLOW <= '0';
@@ -62,7 +63,7 @@ begin
             FLAG_ZERO <= '0';
         end if;
 
-        if (Y(7) = '1') then
+        if (Y(Y'left) = '1') then
             FLAG_NEGATIVE <= '1';
         else
             FLAG_NEGATIVE <= '0';

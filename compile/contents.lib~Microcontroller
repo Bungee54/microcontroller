@@ -1,12 +1,12 @@
-192
-~E 1 "./../src/alu.vhd" 8 ALU
-~A 1 "./../src/alu.vhd" 21 behavioral
-~E 1 "./../src/TestBench/alu_TB.vhd" 8 alu_tb
-~A 1 "./../src/TestBench/alu_TB.vhd" 11 TB_ARCHITECTURE
+219
+~E 1 "./../src/alu.vhd" 9 ALU
+~A 1 "./../src/alu.vhd" 22 behavioral
+~E 1 "./../src/TestBench/alu_TB.vhd" 9 alu_tb
+~A 1 "./../src/TestBench/alu_TB.vhd" 12 TB_ARCHITECTURE
 ~E 1 "./../src/cpu.vhd" 10 cpu
 ~A 1 "./../src/cpu.vhd" 19 rtl
-~E 1 "./../src/TestBench/cpu_TB.vhd" 7 cpu_tb
-~A 1 "./../src/TestBench/cpu_TB.vhd" 10 TB_ARCHITECTURE
+~E 1 "./../src/TestBench/cpu_TB.vhd" 8 cpu_tb
+~A 1 "./../src/TestBench/cpu_TB.vhd" 11 TB_ARCHITECTURE
 ~E 1 "./../src/instruction_fetch_LUT.vhd" 13 instruction_fetch_LUT
 ~A 1 "./../src/instruction_fetch_LUT.vhd" 20 instruction_fetch_LUT
 ~E 1 "./../src/TestBench/instruction_fetch_lut_TB.vhd" 7 instruction_fetch_lut_tb
@@ -18,12 +18,12 @@
 ~A 1 "./../src/TestBench/memory_TB.vhd" 11 TB_ARCHITECTURE
 ~E 1 "./../src/ram.vhd" 10 ram
 ~A 1 "./../src/ram.vhd" 22 structural
-~E 1 "./../src/register_file.vhd" 8 register_file
-~A 1 "./../src/register_file.vhd" 20 behavioral
-~E 1 "./../src/TestBench/register_file_TB.vhd" 7 register_file_tb
-~A 1 "./../src/TestBench/register_file_TB.vhd" 10 TB_ARCHITECTURE
-~C 1 "./../src/TestBench/alu_TB.vhd" 161 testbench_for_alu
-~C 1 "./../src/TestBench/cpu_TB.vhd" 60 testbench_for_cpu
+~E 1 "./../src/register_file.vhd" 9 register_file
+~A 1 "./../src/register_file.vhd" 21 behavioral
+~E 1 "./../src/TestBench/register_file_TB.vhd" 8 register_file_tb
+~A 1 "./../src/TestBench/register_file_TB.vhd" 11 TB_ARCHITECTURE
+~C 1 "./../src/TestBench/alu_TB.vhd" 162 testbench_for_alu
+~C 1 "./../src/TestBench/cpu_TB.vhd" 61 testbench_for_cpu
 ~C 1 "./../src/TestBench/instruction_fetch_lut_TB.vhd" 42 testbench_for_instruction_fetch_lut
 ~C 1 "./../src/TestBench/memory_TB.vhd" 90 testbench_for_memory
-~C 1 "./../src/TestBench/register_file_TB.vhd" 92 testbench_for_register_file
+~C 1 "./../src/TestBench/register_file_TB.vhd" 93 testbench_for_register_file

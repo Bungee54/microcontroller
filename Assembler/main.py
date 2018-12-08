@@ -2,13 +2,17 @@ import assembler
 import sys
 
 dbg = False
+using_file = False # For debug purposes, this can be False
 
 #%% Check console-specified arguments
 assert (len(sys.argv) == 2), "Wrong arguments!\nFormat: %s filename" \
   % sys.argv[0]
 
-with open(sys.argv[1]) as file:
-  data = file.read()
+if using_file: 
+  with open(sys.argv[1]) as file:
+    data = file.read()
+else:
+  data = "		ADD r1, r2"
   
 #%% Assemble
 
