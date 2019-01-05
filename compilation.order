@@ -4,6 +4,7 @@
 .\src\alu.vhd
 .\src\cpu.vhd
 .\src\instruction_fetch_LUT.vhd
+.\src\control_unit.vhd
 .\src\TestBench\cpu_TB.vhd
 .\src\TestBench\register_file_TB.vhd
 .\src\TestBench\memory_TB.vhd

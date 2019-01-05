@@ -1,8 +1,10 @@
-219
+289
 ~E 1 "./../src/alu.vhd" 9 ALU
 ~A 1 "./../src/alu.vhd" 22 behavioral
 ~E 1 "./../src/TestBench/alu_TB.vhd" 9 alu_tb
 ~A 1 "./../src/TestBench/alu_TB.vhd" 12 TB_ARCHITECTURE
+~E 1 "./../src/control_unit.vhd" 14 control_unit
+~A 1 "./../src/control_unit.vhd" 47 control_unit
 ~E 1 "./../src/cpu.vhd" 10 cpu
 ~A 1 "./../src/cpu.vhd" 19 rtl
 ~E 1 "./../src/TestBench/cpu_TB.vhd" 8 cpu_tb
@@ -13,7 +15,6 @@
 ~A 1 "./../src/TestBench/instruction_fetch_lut_TB.vhd" 10 TB_ARCHITECTURE
 ~E 1 "./../src/memory.vhd" 10 memory
 ~A 1 "./../src/memory.vhd" 22 behavioral
-~A 1 "./../src/memory.vhd" 22 structural
 ~E 1 "./../src/TestBench/memory_TB.vhd" 8 memory_tb
 ~A 1 "./../src/TestBench/memory_TB.vhd" 11 TB_ARCHITECTURE
 ~E 1 "./../src/ram.vhd" 10 ram

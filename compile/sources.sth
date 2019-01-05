@@ -14,5 +14,6 @@ c:\My_Aldec_Designs\test_workspace\Microcontroller/src/instruction_fetch_LUT.vhd
 c:\My_Aldec_Designs\test_workspace\Microcontroller/src/register_file.vhd=S
 c:\My_Aldec_Designs\test_workspace\Microcontroller/src/memory.vhd=S
 c:\My_Aldec_Designs\test_workspace\Microcontroller/src/alu.vhd=S
+c:\My_Aldec_Designs\test_workspace\Microcontroller/src/control_unit.vhd=S
 c:\My_Aldec_Designs\test_workspace\Microcontroller/src/cpu.vhd=S
 c:\My_Aldec_Designs\test_workspace\Microcontroller/src/TestBench/cpu_TB.vhd=S

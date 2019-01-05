@@ -2,7 +2,7 @@ import assembler
 import sys
 
 dbg = False
-using_file = False # For debug purposes, this can be False
+using_file = True # For debug purposes, this can be False
 
 #%% Check console-specified arguments
 assert (len(sys.argv) == 2), "Wrong arguments!\nFormat: %s filename" \

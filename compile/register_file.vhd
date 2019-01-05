@@ -8,8 +8,8 @@
 -------------------------------------------------------------------------------
 --
 -- File        : c:\My_Aldec_Designs\test_workspace\Microcontroller\compile\register_file.vhd
--- Generated   : Tue Jul 31 22:58:35 2018
--- From        : c:\My_Aldec_Designs\test_workspace\Microcontroller\graphics\register_file.bde
+-- Generated   : Fri Jan  4 17:38:50 2019
+-- From        : c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.bde
 -- By          : Bde2Vhdl ver. 2.6
 --
 -------------------------------------------------------------------------------
@@ -18,6 +18,8 @@
 --
 -------------------------------------------------------------------------------
 -- Design unit header --
+library microcontroller;
+        use microcontroller.microcontroller_package.all;
 library ieee;
         use ieee.std_logic_1164.all;
         use ieee.NUMERIC_STD.all;
@@ -25,12 +27,12 @@ library ieee;
 entity register_file is
   port(
        i_rw : in STD_LOGIC;
-       i_data : in STD_LOGIC_VECTOR(7 downto 0);
+       i_data : in STD_LOGIC_VECTOR(word_size - 1 downto 0);
        i_raddr1 : in STD_LOGIC_VECTOR(2 downto 0);
        i_raddr2 : in STD_LOGIC_VECTOR(2 downto 0);
        i_waddr : in STD_LOGIC_VECTOR(2 downto 0);
-       o_data1 : out STD_LOGIC_VECTOR(7 downto 0);
-       o_data2 : out STD_LOGIC_VECTOR(7 downto 0)
+       o_data1 : out STD_LOGIC_VECTOR(word_size - 1 downto 0);
+       o_data2 : out STD_LOGIC_VECTOR(word_size - 1 downto 0)
   );
 end register_file;
 
@@ -38,13 +40,13 @@ architecture behavioral of register_file is
 
 ---- Architecture declarations -----
 --Added by Active-HDL. Do not change code inside this section.
-type REGISTER_FILE_T is array (0 to 7) of STD_LOGIC_VECTOR(7 downto 0);
+type REGISTER_FILE_T is array (0 to num_general_registers - 1) of STD_LOGIC_VECTOR(word_size - 1 downto 0);
 --End of extra code.
 
 
 ---- Signal declarations used on the diagram ----
 
-signal registers : REGISTER_FILE_T := (others => (others => '0'));
+signal registers : REGISTER_FILE_T := (others => (0 => '1', others => '0'));
 
 begin
 

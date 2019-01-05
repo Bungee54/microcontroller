@@ -14,16 +14,16 @@ architecture TB_ARCHITECTURE of cpu_tb is
 	port(
 		i_clk : in STD_LOGIC;
 		i_rst : in STD_LOGIC;
-		i_input : in STD_LOGIC_VECTOR(word_size - 1 downto 0);
-		o_output : out STD_LOGIC_VECTOR(word_size - 1 downto 0) );
+		i_input : in T_WORD;
+		o_output : out T_WORD );
 	end component;
 
 	-- Stimulus signals - signals mapped to the input and inout ports of tested entity
 	signal i_clk : STD_LOGIC;
 	signal i_rst : STD_LOGIC;
-	signal i_input : STD_LOGIC_VECTOR(word_size - 1 downto 0);
+	signal i_input : T_WORD;
 	-- Observed signals - signals mapped to the output ports of tested entity
-	signal o_output : STD_LOGIC_VECTOR(word_size - 1 downto 0);
+	signal o_output : T_WORD;
 
 	constant c_CLK_PERIOD : TIME := 20 ns;
 
@@ -48,11 +48,11 @@ begin
 
     STIMULUS : process
     begin
-        i_rst <= '0';
-        wait for 10 ns;
         i_rst <= '1';
         wait for 10 ns;
         i_rst <= '0';
+        wait for 10 ns;
+        i_rst <= '1';
         wait for 1 sec;
     end process STIMULUS;
 

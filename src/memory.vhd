@@ -47,15 +47,13 @@ architecture behavioral of memory is
     signal w_data : STD_LOGIC_VECTOR(io_data'range) := (others => 'Z');
 begin
 
-    UPDATE : process (i_clk)
+    UPDATE : process (i_rw, mem, i_address, io_data)
     begin
-        if (rising_edge(i_clk)) then
-            if (i_rw = '0' or i_rw = 'U') then
-                w_data <= mem(to_integer(UNSIGNED(i_address)));
-            else
-                w_data <= (others => 'Z');
-                mem(to_integer(UNSIGNED(i_address))) <= io_data;
-            end if;
+        if (i_rw = '0' or i_rw = 'U') then
+            w_data <= mem(to_integer(UNSIGNED(i_address)));
+        else
+            w_data <= (others => 'Z');
+            mem(to_integer(UNSIGNED(i_address))) <= io_data;
         end if;
     end process UPDATE;
 

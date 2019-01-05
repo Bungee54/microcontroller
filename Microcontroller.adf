@@ -80,6 +80,7 @@ TestBench=1
 /memory_test.asdb=-1
 /memory_test.awc=-1
 /instruction_fetch_LUT.vhd=-1
+/control_unit.vhd=-1
 TestBench/cpu_TB.vhd=-1
 TestBench/register_file_TB.vhd=-1
 TestBench/memory_TB.vhd=-1
@@ -106,6 +107,7 @@ TestBench/instruction_fetch_lut_TB_runtest.do=-1
 .\src\memory_test.asdb=Accelerated Waveform File
 .\src\memory_test.awc=Accelerated Waveform Configuration
 .\src\instruction_fetch_LUT.vhd=VHDL Source Code
+.\src\control_unit.vhd=VHDL Source Code
 .\src\TestBench\cpu_TB.vhd=VHDL Test Bench
 .\src\TestBench\register_file_TB.vhd=VHDL Test Bench
 .\src\TestBench\memory_TB.vhd=VHDL Test Bench
@@ -114,6 +116,6 @@ TestBench/instruction_fetch_lut_TB_runtest.do=-1
 .\src\TestBench\alu_TB_runtest.do=Macro
 .\src\TestBench\cpu_TB_runtest.do=Macro
 .\src\TestBench\memory_TB_runtest.do=Macro
-
 .\src\TestBench\instruction_fetch_lut_TB.vhd=VHDL Test Bench
 .\src\TestBench\instruction_fetch_lut_TB_runtest.do=Macro
+

@@ -8,10 +8,10 @@ use microcontroller_package.all;
 
 entity ALU is
     port (
-        A : in STD_LOGIC_VECTOR(word_size - 1 downto 0);
-        B : in STD_LOGIC_VECTOR(word_size - 1 downto 0);
-        OPCODE : in STD_LOGIC_VECTOR(3 downto 0);
-        Y : out STD_LOGIC_VECTOR(word_size - 1 downto 0);
+        A : in T_WORD;
+        B : in T_WORD;
+        SEL : in T_ALU_SELECT;
+        Y : out T_WORD;
         FLAG_CARRY : out STD_LOGIC;
         FLAG_OVERFLOW : out STD_LOGIC;
         FLAG_NEGATIVE : out STD_LOGIC;
@@ -22,30 +22,29 @@ end ALU;
 architecture behavioral of ALU is
     signal Y_ext : STD_LOGIC_VECTOR(Y'length downto 0); -- Contains one more bit than Y for carry detection
 begin
-    COMPUTE : process (A, B, OPCODE)
+    COMPUTE : process (A, B, SEL)
     begin
-        case OPCODE is
-            when "0000" => Y_ext <= ('0' & A) + B; -- Add
-                           Y <= A + B;
-            when "0001" => Y_ext <= ('0' & A) + ((not B) + 1); -- Subtract
-                           Y <= A + (not B) + 1;
-            when "0010" => Y <= (not A) + 1; -- Negate (2's Complement)
-            when "0011" => Y <= A + 1; -- Increment
-            when "0100" => Y <= A - 1; -- Decrement
-            when "0101" => Y <= A;     -- Pass Thru
-            when "0110" => Y <= A and B; -- AND
-            when "0111" => Y <= A or B; -- OR
-            when "1000" => Y <= A xor B; -- XOR
-            when "1001" => Y <= not A; -- NOT
-            when "1010" => Y <= shl(A, B); -- Shift Left
-            when "1011" => Y <= shr(A, B); -- Shift Right
-            when others => NULL;
+        case SEL is
+            when SEL_ADD  => Y_ext <= ('0' & A) + B; -- Add
+                             Y <= A + B;
+            when SEL_SUB  => Y_ext <= ('0' & A) + ((not B) + 1); -- Subtract
+                             Y <= A + (not B) + 1;
+            when SEL_NEG  => Y <= (not A) + 1; -- Negate (2's Complement)
+            when SEL_INC  => Y <= A + 1; -- Increment
+            when SEL_DEC  => Y <= A - 1; -- Decrement
+            when SEL_PASS => Y <= A;     -- Pass Thru
+            when SEL_AND  => Y <= A and B; -- AND
+            when SEL_OR   => Y <= A or B; -- OR
+            when SEL_XOR  => Y <= A xor B; -- XOR
+            when SEL_NOT  => Y <= not A; -- NOT
+            when SEL_SHL  => Y <= shl(A, B); -- Shift Left
+            when SEL_SHR   => Y <= shr(A, B); -- Shift Right
         end case;
     end process COMPUTE;
 
-    SET_FLAGS : process (Y, Y_ext, OPCODE)
+    SET_FLAGS : process (Y, Y_ext, SEL)
     begin
-        if (OPCODE = "0000" or OPCODE = "0001") then
+        if (SEL = SEL_ADD or SEL = SEL_SUB) then
             FLAG_CARRY <= Y_ext(Y_ext'left);
             if ((A(A'left) = B(B'left)) and (Y(Y'left) /= A(A'left))) then
                 FLAG_OVERFLOW <= '1';

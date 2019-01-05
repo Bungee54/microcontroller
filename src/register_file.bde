@@ -7,18 +7,18 @@ HEADER
  {
   #ARCHITECTURE="behavioral"
   #BLOCKTABLE_FILE="#HDL2DIAGRAM.bde"
-  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"i_data\"><left=\"7\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE0="<range<index=\"0\"><name=\"i_data\"><left=\"word_size - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #DEFAULT_RANGE1="<range<index=\"0\"><name=\"i_raddr1\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #DEFAULT_RANGE2="<range<index=\"0\"><name=\"i_raddr2\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #DEFAULT_RANGE3="<range<index=\"0\"><name=\"i_waddr\"><left=\"2\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE4="<range<index=\"0\"><name=\"o_data1\"><left=\"7\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
-  #DEFAULT_RANGE5="<range<index=\"0\"><name=\"o_data2\"><left=\"7\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE4="<range<index=\"0\"><name=\"o_data1\"><left=\"word_size - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
+  #DEFAULT_RANGE5="<range<index=\"0\"><name=\"o_data2\"><left=\"word_size - 1\"><direction=\"downto\"><right=\"0\"><initial_value=\"\"><delay=\"\">>"
   #ENTITY="register_file"
   #LANGUAGE="VHDL"
-  #RANGE_RESOLUTION1="<range<index=\"0\"><name=\"registers\"><left=\"0\"><direction=\"to\"><right=\"7\"><initial_value=\"(others => (others => '0'))\"><delay=\"\">>"
+  #RANGE_RESOLUTION1="<range<index=\"0\"><name=\"registers\"><left=\"0\"><direction=\"to\"><right=\"num_general_registers - 1\"><initial_value=\"(others => (0 => '1', others => '0'))\"><delay=\"\">>"
   AUTHOR="Evan"
   COMPANY="Old Dominion University"
-  CREATIONDATE="7/20/2018"
+  CREATIONDATE="12/9/2018"
   SOURCE=".\\..\\src\\register_file.vhd"
  }
 }
@@ -27,7 +27,7 @@ PAGE ""
 {
  PAGEHEADER
  {
-  PAGESIZE (2532,1360)
+  PAGESIZE (2652,1370)
   MARGINS (200,200,200,200)
   RECT (0,0,0,0)
  }
@@ -38,10 +38,12 @@ PAGE ""
   {
    LABEL "Design Unit Header"
    TEXT 
+"library microcontroller;\n"+
+"        use microcontroller.microcontroller_package.all;\n"+
 "library ieee;\n"+
 "        use ieee.std_logic_1164.all;\n"+
 "        use ieee.NUMERIC_STD.all;"
-   RECT (220,260,620,472)
+   RECT (220,260,620,538)
    MARGINS (20,20)
    MULTILINE
    SYNTAXCOLORED
@@ -54,9 +56,9 @@ PAGE ""
    LABEL "Architecture Declaration"
    TEXT 
 "--Added by Active-HDL. Do not change code inside this section.\n"+
-"type REGISTER_FILE_T is array (0 to 7) of STD_LOGIC_VECTOR(7 downto 0);\n"+
+"type REGISTER_FILE_T is array (0 to num_general_registers - 1) of STD_LOGIC_VECTOR(word_size - 1 downto 0);\n"+
 "--End of extra code."
-   RECT (220,472,620,684)
+   RECT (220,538,620,750)
    MARGINS (20,20)
    MULTILINE
    SYNTAXCOLORED
@@ -66,7 +68,7 @@ PAGE ""
   }
   PROCESS  3, 0, 0
   {
-   LABEL "process_24"
+   LABEL "process_25"
    TEXT 
 "process (i_rw,i_waddr)\n"+
 "                       begin\n"+
@@ -75,16 +77,16 @@ PAGE ""
 "                         end if;\n"+
 "                       end process;\n"+
 "                      "
-   RECT (1040,240,1441,520)
+   RECT (1160,240,1561,520)
    MARGINS (20,20)
    SYNTAXCOLORED
    SHOWTEXT
-   VTX (  52, 55, 58, 62 )
+   VTX (  52, 56, 58, 61 )
    VARIABLES
    {
     #UPDATE_SENS_LIST="0"
    }
-   LIST (  58, 62 )
+   LIST (  58, 61 )
   }
   INSTANCE  4, 0, 0
   {
@@ -93,25 +95,25 @@ PAGE ""
     #COMPONENT="BusInput"
     #CUSTOM_NAME=""
     #LIBRARY="#terminals"
-    #REFERENCE="i_data(7:0)"
+    #REFERENCE="i_data(word_size - 1:0)"
     #SYMBOL="BusInput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
-   COORD (900,340)
-   VERTEXES ( (2,56) )
+   COORD (1020,340)
+   VERTEXES ( (2,55) )
   }
   SIGNALASSIGN  5, 0, 0
   {
-   LABEL "block_33"
+   LABEL "block_34"
    TEXT "o_data1 <= registers(to_integer(unsigned(i_raddr1)));"
-   RECT (1560,240,1961,340)
+   RECT (1680,240,2081,340)
    MARGINS (20,20)
    SYNTAXCOLORED
    SHOWLABEL
    SHOWTEXT
    CORNER 10
-   VTX (  32, 37, 46 )
+   VTX (  31, 37, 46 )
   }
   INSTANCE  6, 0, 0
   {
@@ -125,20 +127,20 @@ PAGE ""
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
-   COORD (900,580)
+   COORD (1020,580)
    VERTEXES ( (2,40) )
   }
   SIGNALASSIGN  7, 0, 0
   {
-   LABEL "block_34"
+   LABEL "block_35"
    TEXT "o_data2 <= registers(to_integer(unsigned(i_raddr2)));"
-   RECT (1560,640,1961,740)
+   RECT (1680,620,2081,720)
    MARGINS (20,20)
    SYNTAXCOLORED
    SHOWLABEL
    SHOWTEXT
    CORNER 10
-   VTX (  34, 44, 49 )
+   VTX (  35, 43, 49 )
   }
   INSTANCE  8, 0, 0
   {
@@ -152,8 +154,8 @@ PAGE ""
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
-   COORD (900,700)
-   VERTEXES ( (2,43) )
+   COORD (1020,680)
+   VERTEXES ( (2,44) )
   }
   INSTANCE  9, 0, 0
   {
@@ -167,7 +169,7 @@ PAGE ""
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="STD_LOGIC"
    }
-   COORD (900,260)
+   COORD (1020,260)
    VERTEXES ( (2,59) )
   }
   INSTANCE  10, 0, 0
@@ -182,8 +184,8 @@ PAGE ""
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
-   COORD (900,300)
-   VERTEXES ( (2,61) )
+   COORD (1020,300)
+   VERTEXES ( (2,62) )
   }
   INSTANCE  11, 0, 0
   {
@@ -192,13 +194,13 @@ PAGE ""
     #COMPONENT="BusOutput"
     #CUSTOM_NAME=""
     #LIBRARY="#terminals"
-    #REFERENCE="o_data1(7:0)"
+    #REFERENCE="o_data1(word_size - 1:0)"
     #SYMBOL="BusOutput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
-   COORD (2060,260)
-   VERTEXES ( (2,31) )
+   COORD (2180,260)
+   VERTEXES ( (2,32) )
   }
   INSTANCE  12, 0, 0
   {
@@ -207,60 +209,60 @@ PAGE ""
     #COMPONENT="BusOutput"
     #CUSTOM_NAME=""
     #LIBRARY="#terminals"
-    #REFERENCE="o_data2(7:0)"
+    #REFERENCE="o_data2(word_size - 1:0)"
     #SYMBOL="BusOutput"
     #SYMBOL_GLOBALLY_UNIQUE_IDENTIFIER=""
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
-   COORD (2060,660)
-   VERTEXES ( (2,35) )
+   COORD (2180,640)
+   VERTEXES ( (2,34) )
   }
   TEXT  13, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (848,340,848,340)
+   RECT (968,340,968,340)
    ALIGN 6
    PARENT 4
   }
   TEXT  14, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (848,580,848,580)
+   RECT (968,580,968,580)
    ALIGN 6
    PARENT 6
   }
   TEXT  15, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (848,700,848,700)
+   RECT (968,680,968,680)
    ALIGN 6
    PARENT 8
   }
   TEXT  16, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (848,260,848,260)
+   RECT (968,260,968,260)
    ALIGN 6
    PARENT 9
   }
   TEXT  17, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (848,300,848,300)
+   RECT (968,300,968,300)
    ALIGN 6
    PARENT 10
   }
   TEXT  18, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (2112,260,2112,260)
+   RECT (2232,260,2232,260)
    ALIGN 4
    PARENT 11
   }
   TEXT  19, 0, 0
   {
    TEXT "$#REFERENCE"
-   RECT (2112,660,2112,660)
+   RECT (2232,640,2232,640)
    ALIGN 4
    PARENT 12
   }
@@ -268,7 +270,8 @@ PAGE ""
   {
    VARIABLES
    {
-    #NAME="i_data(7:0)"
+    #DOWNTO="1"
+    #NAME="i_data(word_size - 1:0)"
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
   }
@@ -308,7 +311,8 @@ PAGE ""
   {
    VARIABLES
    {
-    #NAME="o_data1(7:0)"
+    #DOWNTO="1"
+    #NAME="o_data1(word_size - 1:0)"
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
   }
@@ -316,7 +320,8 @@ PAGE ""
   {
    VARIABLES
    {
-    #NAME="o_data2(7:0)"
+    #DOWNTO="1"
+    #NAME="o_data2(word_size - 1:0)"
     #VHDL_TYPE="STD_LOGIC_VECTOR"
    }
   }
@@ -324,8 +329,9 @@ PAGE ""
   {
    VARIABLES
    {
-    #DECLARATION="(0:7)"
-    #INITIAL_VALUE="(others => (others => '0'))"
+    #DECLARATION="(0:num_general_registers - 1)"
+    #DOWNTO="0"
+    #INITIAL_VALUE="(others => (0 => '1', others => '0'))"
     #MDA_BASE_TYPE="STD_LOGIC_VECTOR"
     #MDA_KIND="NORMAL"
     #MDA_RECORD_TOKEN="MDA"
@@ -337,7 +343,7 @@ PAGE ""
   {
    VARIABLES
    {
-    #INITIAL_VALUE="(others => (others => '0'))"
+    #INITIAL_VALUE="(others => (0 => '1', others => '0'))"
     #NAME="registers(to_integer(unsigned(i_raddr1)))"
    }
   }
@@ -345,7 +351,7 @@ PAGE ""
   {
    VARIABLES
    {
-    #INITIAL_VALUE="(others => (others => '0'))"
+    #INITIAL_VALUE="(others => (0 => '1', others => '0'))"
     #NAME="registers(to_integer(unsigned(i_raddr2)))"
    }
   }
@@ -353,17 +359,17 @@ PAGE ""
   {
    VARIABLES
    {
-    #INITIAL_VALUE="(others => (others => '0'))"
+    #INITIAL_VALUE="(others => (0 => '1', others => '0'))"
     #NAME="registers(to_integer(unsigned(i_waddr)))"
    }
   }
   VTX  31, 0, 0
   {
-   COORD (2060,260)
+   COORD (2081,260)
   }
   VTX  32, 0, 0
   {
-   COORD (1961,260)
+   COORD (2180,260)
   }
   BUS  33, 0, 0
   {
@@ -372,11 +378,11 @@ PAGE ""
   }
   VTX  34, 0, 0
   {
-   COORD (1961,660)
+   COORD (2180,640)
   }
   VTX  35, 0, 0
   {
-   COORD (2060,660)
+   COORD (2081,640)
   }
   BUS  36, 0, 0
   {
@@ -385,11 +391,11 @@ PAGE ""
   }
   VTX  37, 0, 0
   {
-   COORD (1560,300)
+   COORD (1680,300)
   }
   VTX  38, 0, 0
   {
-   COORD (1520,300)
+   COORD (1640,300)
   }
   BUS  39, 0, 0
   {
@@ -398,11 +404,11 @@ PAGE ""
   }
   VTX  40, 0, 0
   {
-   COORD (900,580)
+   COORD (1020,580)
   }
   VTX  41, 0, 0
   {
-   COORD (1520,580)
+   COORD (1640,580)
   }
   BUS  42, 0, 0
   {
@@ -411,11 +417,11 @@ PAGE ""
   }
   VTX  43, 0, 0
   {
-   COORD (900,700)
+   COORD (1680,680)
   }
   VTX  44, 0, 0
   {
-   COORD (1560,700)
+   COORD (1020,680)
   }
   BUS  45, 0, 0
   {
@@ -424,11 +430,11 @@ PAGE ""
   }
   VTX  46, 0, 0
   {
-   COORD (1560,260)
+   COORD (1680,260)
   }
   VTX  47, 0, 0
   {
-   COORD (1540,260)
+   COORD (1660,260)
   }
   WIRE  48, 0, 0
   {
@@ -437,11 +443,11 @@ PAGE ""
   }
   VTX  49, 0, 0
   {
-   COORD (1560,660)
+   COORD (1680,640)
   }
   VTX  50, 0, 0
   {
-   COORD (1540,660)
+   COORD (1660,640)
   }
   WIRE  51, 0, 0
   {
@@ -450,11 +456,11 @@ PAGE ""
   }
   VTX  52, 0, 0
   {
-   COORD (1441,260)
+   COORD (1561,260)
   }
   VTX  53, 0, 0
   {
-   COORD (1540,260)
+   COORD (1660,260)
   }
   WIRE  54, 0, 0
   {
@@ -463,11 +469,11 @@ PAGE ""
   }
   VTX  55, 0, 0
   {
-   COORD (1040,340)
+   COORD (1020,340)
   }
   VTX  56, 0, 0
   {
-   COORD (900,340)
+   COORD (1160,340)
   }
   BUS  57, 0, 0
   {
@@ -476,11 +482,11 @@ PAGE ""
   }
   VTX  58, 0, 0
   {
-   COORD (1040,260)
+   COORD (1160,260)
   }
   VTX  59, 0, 0
   {
-   COORD (900,260)
+   COORD (1020,260)
   }
   WIRE  60, 0, 0
   {
@@ -489,11 +495,11 @@ PAGE ""
   }
   VTX  61, 0, 0
   {
-   COORD (900,300)
+   COORD (1160,300)
   }
   VTX  62, 0, 0
   {
-   COORD (1040,300)
+   COORD (1020,300)
   }
   BUS  63, 0, 0
   {
@@ -507,11 +513,11 @@ PAGE ""
   }
   VTX  65, 0, 0
   {
-   COORD (1540,250)
+   COORD (1660,250)
   }
   VTX  66, 0, 0
   {
-   COORD (1540,670)
+   COORD (1660,650)
   }
   MDARRAY  67, 0, 0
   {
@@ -522,7 +528,7 @@ PAGE ""
   TEXT  68, 0, 1
   {
    TEXT "$#NAME"
-   RECT (1540,460,1540,460)
+   RECT (1660,450,1660,450)
    ALIGN 4
    PARENT 67
   }

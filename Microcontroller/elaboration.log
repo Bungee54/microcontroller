@@ -1,4 +1,4 @@
-Active-HDL 10.3.3558.6081  2018-12-07 10:22:23 PM
+Active-HDL 10.3.3558.6081  2019-01-05 2:20:55 PM
 
 Elaboration top modules:
 Architecture                  TB_ARCHITECTURE(cpu_tb)
@@ -9,6 +9,7 @@ Entity                | Architecture          | Library         | Info | Compile
 -------------------------------------------------------------------------------------------------------------------------
 cpu_tb                | TB_ARCHITECTURE       | microcontroller |      | 10.3.3558.6081  (Windows) | -O3 -2008
 cpu                   | rtl                   | microcontroller |      | 10.3.3558.6081  (Windows) | -O3 -2008
+control_unit          | control_unit          | microcontroller |      | 10.3.3558.6081  (Windows) | -O3 -2008
 ALU                   | behavioral            | microcontroller |      | 10.3.3558.6081  (Windows) | -O3 -2008
 memory                | behavioral            | microcontroller |      | 10.3.3558.6081  (Windows) | -O3 -2008
 register_file         | behavioral            | microcontroller |      | 10.3.3558.6081  (Windows) | -O3 -2008

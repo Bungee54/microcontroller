@@ -15,21 +15,21 @@ architecture TB_ARCHITECTURE of register_file_tb is
 		i_raddr1 : in STD_LOGIC_VECTOR(2 downto 0);
 		i_raddr2 : in STD_LOGIC_VECTOR(2 downto 0);
 		i_waddr : in STD_LOGIC_VECTOR(2 downto 0);
-		i_data : in STD_LOGIC_VECTOR(word_size - 1 downto 0);
+		i_data : in T_WORD;
 		i_rw : in STD_LOGIC;
-		o_data1 : out STD_LOGIC_VECTOR(word_size - 1 downto 0);
-		o_data2 : out STD_LOGIC_VECTOR(word_size - 1 downto 0) );
+		o_data1 : out T_WORD;
+		o_data2 : out T_WORD );
 	end component;
 
 	-- Stimulus signals - signals mapped to the input and inout ports of tested entity
 	signal i_raddr1 : STD_LOGIC_VECTOR(2 downto 0);
 	signal i_raddr2 : STD_LOGIC_VECTOR(2 downto 0);
 	signal i_waddr : STD_LOGIC_VECTOR(2 downto 0);
-	signal i_data : STD_LOGIC_VECTOR(word_size - 1 downto 0);
+	signal i_data : T_WORD;
 	signal i_rw : STD_LOGIC;
 	-- Observed signals - signals mapped to the output ports of tested entity
-	signal o_data1 : STD_LOGIC_VECTOR(word_size - 1 downto 0);
-	signal o_data2 : STD_LOGIC_VECTOR(word_size - 1 downto 0);
+	signal o_data1 : T_WORD;
+	signal o_data2 : T_WORD;
 
 	-- Add your code here ...
 

@@ -9,3 +9,4 @@ i<>.\src\microcontroller_package.vhd
 i<>.\src\TestBench\memory_TB.vhd
 i<>.\src\instruction_fetch_LUT.vhd
 i<>.\src\TestBench\instruction_fetch_lut_TB.vhd
+i<>.\src\control_unit.vhd

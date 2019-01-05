@@ -22,9 +22,9 @@ architecture TB_ARCHITECTURE of memory_tb is
 
 	-- Stimulus signals - signals mapped to the input and inout ports of tested entity
 	signal i_clk : STD_LOGIC := '0';
-	signal i_address : STD_LOGIC_VECTOR(addr_size - 1 downto 0) := (others => '0');
+	signal i_address : T_WORD := (others => '0');
 	signal i_rw : STD_LOGIC := '0';
-	signal io_data : STD_LOGIC_VECTOR(word_size - 1 downto 0) := (others => 'Z');
+	signal io_data : T_WORD := (others => 'Z');
 	-- Observed signals - signals mapped to the output ports of tested entity
 
 	constant c_CLK_PERIOD : TIME := 20 ns;
