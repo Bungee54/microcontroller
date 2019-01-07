@@ -47,9 +47,16 @@ begin
 
     SET_FLAGS : process (Y, Y_ext, SEL)
     begin
-        if (SEL = SEL_ADD or SEL = SEL_SUB) then
+        if (SEL = SEL_ADD) then
             FLAG_CARRY <= Y_ext(Y_ext'left);
             if ((A(A'left) = B(B'left)) and (Y(Y'left) /= A(A'left))) then
+                FLAG_OVERFLOW <= '1';
+            else
+                FLAG_OVERFLOW <= '0';
+            end if;
+        elsif (SEL = SEL_SUB) then -- Separate case because we need to negate B before checking
+            FLAG_CARRY <= Y_ext(Y_ext'left);
+            if ((A(A'left) /= B(B'left)) and (Y(Y'left) /= A(A'left))) then
                 FLAG_OVERFLOW <= '1';
             else
                 FLAG_OVERFLOW <= '0';

@@ -44,6 +44,12 @@ begin
             when "01110" & "01" => w_num_fetches <= "01";
             when "01111" & "01" => w_num_fetches <= "01";
             when "10000" & "01" => w_num_fetches <= "01";
+            when "10001" & "01" => w_num_fetches <= "01";
+            when "10001" & "11" => w_num_fetches <= "01";
+            when "10010" & "01" => w_num_fetches <= "01";
+            when "10010" & "11" => w_num_fetches <= "01";
+            when "10011" & "01" => w_num_fetches <= "01";
+            when "10011" & "11" => w_num_fetches <= "01";
             when others         => w_num_fetches <= "00";
         end case;
     end process;

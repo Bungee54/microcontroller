@@ -11,6 +11,11 @@ package microcontroller_package is
     constant num_general_registers : NATURAL := 8;
     constant num_fetch_registers : NATURAL := 2;
 
+    constant index_FLAG_CARRY : NATURAL := 7;
+    constant index_FLAG_OVERFLOW : NATURAL := 6;
+    constant index_FLAG_NEGATIVE : NATURAL := 5;
+    constant index_FLAG_ZERO : NATURAL := 4;
+
     subtype T_WORD is STD_LOGIC_VECTOR(word_size - 1 downto 0);
     type T_FETCH_TABLE is array(opcode_size - 1 downto 0) of NATURAL;
     subtype T_LOAD is STD_LOGIC_VECTOR(1 downto 0);
@@ -18,6 +23,7 @@ package microcontroller_package is
     type T_FETCH_REGFILE is array(0 to num_fetch_registers - 1) of T_WORD;
     subtype T_REGF_ADDR is STD_LOGIC_VECTOR(reg_addr_size - 1 downto 0);
     subtype T_SUBSTATE is INTEGER range 0 to 7;
+    subtype T_STATUS is STD_LOGIC_VECTOR(7 downto 0);
     
     type T_BUS_SELECT is (          -- Prefixed with 'SEL' to distinguish it from actual signals
         SEL_ALU_OUT,

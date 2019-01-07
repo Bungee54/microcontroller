@@ -57,7 +57,7 @@ architecture control_unit of control_unit is
 
     signal ctrl_ROM_addr : T_WORD;
 
-    signal r_status : STD_LOGIC_VECTOR(7 downto 0); -- Status register (zero, carry, neg, overflow, TBD, TBD, TBD, TBD) <- word_size - 1 downto 0
+    signal r_status : T_STATUS; -- Status register (zero, carry, neg, overflow, TBD, TBD, TBD, TBD) <- word_size - 1 downto 0
     signal r_pc : T_WORD; -- Program counter
 
     signal r_ir : T_WORD; -- Instruction register
@@ -121,7 +121,12 @@ architecture control_unit of control_unit is
         signal out_regf_loadWData : out T_LOAD;
         signal out_regf_rw : out STD_LOGIC;
         signal out_fetched_word : out T_WORD;
-        signal ctrl_state : out T_CPU_STATE
+        signal ctrl_state : out T_CPU_STATE;
+        signal r_status : out T_STATUS;
+        i_FLAG_CARRY : in STD_LOGIC;
+        i_FLAG_OVERFLOW : in STD_LOGIC;
+        i_FLAG_NEGATIVE : in STD_LOGIC;
+        i_FLAG_ZERO : in STD_LOGIC
     ) is
     begin
         if (ctrl_substate = 0) then
@@ -156,9 +161,15 @@ architecture control_unit of control_unit is
             out_BUS0_sel <= SEL_ALU_OUT; -- Put ALU output on bus
             CONNECT_FROM_BUS('0', out_regf_loadWData); -- Connect regfile to that bus
             out_regf_rw <= '1'; -- Write it!
+
             ctrl_substate <= 2;
 
         elsif (ctrl_substate = 2) then
+            r_status(index_FLAG_CARRY) <= i_FLAG_CARRY; -- Update status registers
+            r_status(index_FLAG_OVERFLOW) <= i_FLAG_OVERFLOW;
+            r_status(index_FLAG_NEGATIVE) <= i_FLAG_NEGATIVE;
+            r_status(index_FLAG_ZERO) <= i_FLAG_ZERO;
+
             DISCONNECT_FROM_BUS(out_regf_loadWData); -- Clean up
             out_regf_rw <= '0';
             ctrl_substate <= 0;
@@ -281,7 +292,8 @@ begin
                                     SEL_ADD, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- Add rA, NUMBER
                             when "00000" & "01" =>
@@ -289,7 +301,8 @@ begin
                                     SEL_ADD, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- SUB rA, rB
                             when "00001" & "00" =>
@@ -297,7 +310,8 @@ begin
                                     SEL_SUB, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- SUB rA, NUM
                             when "00001" & "01" =>
@@ -305,7 +319,8 @@ begin
                                     SEL_SUB, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- NEG rA
                             when "00010" & "00" =>
@@ -313,7 +328,8 @@ begin
                                     SEL_NEG, ARGSET_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- INC rA
                             when "00011" & "00" =>
@@ -321,7 +337,8 @@ begin
                                     SEL_INC, ARGSET_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- DEC rA
                             when "00100" & "00" =>
@@ -329,7 +346,8 @@ begin
                                     SEL_DEC, ARGSET_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- AND rA, rB
                             when "00101" & "00" =>
@@ -337,7 +355,8 @@ begin
                                     SEL_AND, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- AND rA, NUMBER
                             when "00101" & "01" =>
@@ -345,7 +364,8 @@ begin
                                     SEL_AND, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- OR rA, rB
                             when "00110" & "00" =>
@@ -353,7 +373,8 @@ begin
                                     SEL_OR, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- OR rA, NUMBER
                             when "00110" & "01" =>
@@ -361,7 +382,8 @@ begin
                                     SEL_OR, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- XOR rA, rB
                             when "00111" & "00" =>
@@ -369,7 +391,8 @@ begin
                                     SEL_XOR, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- XOR rA, NUMBER
                             when "00111" & "01" =>
@@ -377,7 +400,8 @@ begin
                                     SEL_XOR, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- NOT rA
                             when "01000" & "00" =>
@@ -385,7 +409,8 @@ begin
                                     SEL_NOT, ARGSET_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- LSL rA, rB
                             when "01001" & "00" =>
@@ -393,7 +418,8 @@ begin
                                     SEL_LSL, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- LSL rA, NUMBER
                             when "01001" & "01" =>
@@ -401,7 +427,8 @@ begin
                                     SEL_LSL, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- LSR rA, rB
                             when "01010" & "00" =>
@@ -409,7 +436,8 @@ begin
                                     SEL_LSR, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- LSR rA, NUMBER
                             when "01010" & "01" =>
@@ -417,7 +445,8 @@ begin
                                     SEL_LSR, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- ASR rA, rB
                             when "01011" & "00" =>
@@ -425,7 +454,8 @@ begin
                                     SEL_ASR, ARGSET_REG_REG,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- ASR rA, NUMBER
                             when "01011" & "01" =>
@@ -433,7 +463,8 @@ begin
                                     SEL_ASR, ARGSET_REG_NUM,
                                     ctrl_substate, ir_addr_rA, ir_addr_rB, r_fetch, out_regf_raddr1, out_regf_raddr2,
                                     out_regf_waddr, out_BUS0_sel, out_BUS1_sel, out_ALU_loadA, out_ALU_loadB,
-                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state);
+                                    out_ALU_sel, out_regf_loadWData, out_regf_rw, out_fetched_word, ctrl_state,
+                                    r_status, i_FLAG_CARRY, i_FLAG_OVERFLOW, i_FLAG_NEGATIVE, i_FLAG_ZERO);
 
                             -- CMP rA, rB
                             when "01100" & "00" =>
@@ -453,6 +484,10 @@ begin
                                     out_ALU_sel <= SEL_SUB;
                                     ctrl_substate <= 1;
                                 elsif (ctrl_substate = 1) then
+                                    r_status(index_FLAG_CARRY) <= i_FLAG_CARRY; -- Update status registers
+                                    r_status(index_FLAG_OVERFLOW) <= i_FLAG_OVERFLOW;
+                                    r_status(index_FLAG_NEGATIVE) <= i_FLAG_NEGATIVE;
+                                    r_status(index_FLAG_ZERO) <= i_FLAG_ZERO;
                                     DISCONNECT_FROM_BUS(out_ALU_loadA);
                                     DISCONNECT_FROM_BUS(out_ALU_loadB);
                                     ctrl_substate <= 0;
@@ -473,6 +508,10 @@ begin
                                     out_ALU_sel <= SEL_SUB;
                                     ctrl_substate <= 1;
                                 elsif (ctrl_substate = 1) then
+                                    r_status(index_FLAG_CARRY) <= i_FLAG_CARRY; -- Update status registers
+                                    r_status(index_FLAG_OVERFLOW) <= i_FLAG_OVERFLOW;
+                                    r_status(index_FLAG_NEGATIVE) <= i_FLAG_NEGATIVE;
+                                    r_status(index_FLAG_ZERO) <= i_FLAG_ZERO;
                                     DISCONNECT_FROM_BUS(out_ALU_loadA);
                                     DISCONNECT_FROM_BUS(out_ALU_loadB);
                                     ctrl_substate <= 0;
@@ -609,7 +648,7 @@ begin
                                     ctrl_state <= FETCH_REQ_INSTRUCTION;
                                 end if;
 
-                            -- AJMP rA
+                            -- AJMP NUMBER
                             when "10000" & "01" =>
                                 if (ctrl_substate = 0) then
                                     out_fetched_word <= r_fetch(0);
@@ -617,6 +656,174 @@ begin
                                     ctrl_substate <= 1;
                                 elsif (ctrl_substate = 1) then
                                     r_pc <= i_BUS0;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJE rA
+                            when "10001" & "00" =>
+                                if (ctrl_substate = 0) then
+                                    out_regf_raddr1 <= ir_addr_rA;
+                                    out_BUS0_sel <= SEL_REGF_RDATA1;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_ZERO) = '1') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJE NUMBER
+                            when "10001" & "01" =>
+                                if (ctrl_substate = 0) then
+                                    out_fetched_word <= r_fetch(0);
+                                    out_BUS0_sel <= SEL_FETCH_REG;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_ZERO) = '1') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJNE rA
+                            when "10001" & "10" =>
+                                if (ctrl_substate = 0) then
+                                    out_regf_raddr1 <= ir_addr_rA;
+                                    out_BUS0_sel <= SEL_REGF_RDATA1;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_ZERO) = '0') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJNE NUMBER
+                            when "10001" & "11" =>
+                                if (ctrl_substate = 0) then
+                                    out_fetched_word <= r_fetch(0);
+                                    out_BUS0_sel <= SEL_FETCH_REG;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_ZERO) = '0') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJL rA
+                            when "10010" & "00" =>
+                                if (ctrl_substate = 0) then
+                                    out_regf_raddr1 <= ir_addr_rA;
+                                    out_BUS0_sel <= SEL_REGF_RDATA1;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_NEGATIVE) /= r_status(index_FLAG_OVERFLOW)) then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJL NUMBER
+                            when "10010" & "01" =>
+                                if (ctrl_substate = 0) then
+                                    out_fetched_word <= r_fetch(0);
+                                    out_BUS0_sel <= SEL_FETCH_REG;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_NEGATIVE) /= r_status(index_FLAG_OVERFLOW)) then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJLE rA
+                            when "10010" & "10" =>
+                                if (ctrl_substate = 0) then
+                                    out_regf_raddr1 <= ir_addr_rA;
+                                    out_BUS0_sel <= SEL_REGF_RDATA1;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if ((r_status(index_FLAG_NEGATIVE) /= r_status(index_FLAG_OVERFLOW)) or r_status(index_FLAG_ZERO) = '1') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJLE NUMBER
+                            when "10010" & "11" =>
+                                if (ctrl_substate = 0) then
+                                    out_fetched_word <= r_fetch(0);
+                                    out_BUS0_sel <= SEL_FETCH_REG;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if ((r_status(index_FLAG_NEGATIVE) /= r_status(index_FLAG_OVERFLOW)) or r_status(index_FLAG_ZERO) = '1') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJG rA
+                            when "10011" & "00" =>
+                                if (ctrl_substate = 0) then
+                                    out_regf_raddr1 <= ir_addr_rA;
+                                    out_BUS0_sel <= SEL_REGF_RDATA1;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_NEGATIVE) = r_status(index_FLAG_OVERFLOW) and r_status(index_FLAG_ZERO) = '0') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJG NUMBER
+                            when "10011" & "01" =>
+                                if (ctrl_substate = 0) then
+                                    out_fetched_word <= r_fetch(0);
+                                    out_BUS0_sel <= SEL_FETCH_REG;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_NEGATIVE) = r_status(index_FLAG_OVERFLOW) and r_status(index_FLAG_ZERO) = '0') then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJGE rA
+                            when "10011" & "10" =>
+                                if (ctrl_substate = 0) then
+                                    out_regf_raddr1 <= ir_addr_rA;
+                                    out_BUS0_sel <= SEL_REGF_RDATA1;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_NEGATIVE) = r_status(index_FLAG_OVERFLOW)) then
+                                        r_pc <= i_BUS0;
+                                    end if;
+                                    ctrl_substate <= 0;
+                                    ctrl_state <= FETCH_REQ_INSTRUCTION;
+                                end if;
+
+                            -- AJGE NUMBER
+                            when "10011" & "11" =>
+                                if (ctrl_substate = 0) then
+                                    out_fetched_word <= r_fetch(0);
+                                    out_BUS0_sel <= SEL_FETCH_REG;
+                                    ctrl_substate <= 1;
+                                elsif (ctrl_substate = 1) then
+                                    if (r_status(index_FLAG_NEGATIVE) = r_status(index_FLAG_OVERFLOW)) then
+                                        r_pc <= i_BUS0;
+                                    end if;
                                     ctrl_substate <= 0;
                                     ctrl_state <= FETCH_REQ_INSTRUCTION;
                                 end if;
