@@ -1,4 +1,3 @@
-i<>.\src\alu.vhd
 i<>.\src\register_file.vhd
 i<>.\src\TestBench\register_file_TB.vhd
 i<>.\src\TestBench\alu_TB.vhd
@@ -10,3 +9,4 @@ i<>.\src\TestBench\memory_TB.vhd
 i<>.\src\instruction_fetch_LUT.vhd
 i<>.\src\TestBench\instruction_fetch_lut_TB.vhd
 i<>.\src\control_unit.vhd
+i<>.\src\alu.vhd

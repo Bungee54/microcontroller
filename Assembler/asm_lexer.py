@@ -7,7 +7,7 @@ instructions = [
   'DEC', 'AND', 'OR',  'XOR',
   'NOT', 'LSL', 'LSR', 'ASR', 
   'CMP', 'AJMP','LDI', 'STO',
-  'RET', 'HALT'
+  'MOV', 'RET', 'HALT'
 ]
 
 valid_instruction_tokens = instructions + \
@@ -49,12 +49,12 @@ def t_INSTRUCTION(t):
   return t
   
 # Seeks labels that begin with a letter and continue with
-# letters and/or numbers, ending in a colon ':'. Must be
+# letters and/or numbers (or '_'), ending in a colon ':'. Must be
 # the first token of a line. 
 # All label letters must be lowercase, and cannot begin with
 # 'r' and a digit (to prevent naming collisions with registers).
 def t_LABEL_DEF(t):
-  r'(^|\n)(?!r[0-9])[a-z]([a-z0-9]+)?:'
+  r'(^|\n)(?!r[0-9])[a-z_]([a-z0-9_]+)?:'
   t.value = t.value[:-1].strip()
   return t
 
@@ -65,7 +65,7 @@ def t_LABEL_DEF(t):
 # Same syntax as t_LABEL_DEF but has no ':' at the end and must
 # be surrounded in '<' and '>' brackets. 
 def t_LABEL_REF(t):
-  r'<(?!r[0-9])[a-z]([a-z0-9]+)?>'
+  r'<(?!r[0-9])[a-z_]([a-z0-9_]+)?>'
   t.value = t.value[1:-1].strip()
   return t
   

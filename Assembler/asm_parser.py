@@ -75,10 +75,11 @@ def parse_data(data):
   assembly.
   '''
   
-  data = data.strip()
+  data = data.strip().splitlines()
+  data = list(filter(lambda line: line != '' and not line.isspace(), data))
   instruction_lines = []
 
-  for text_line in data.splitlines():
+  for text_line in data:
     parsed_tuple = parser.parse(text_line.strip())
     instruction_line = asm_utility.InstructionLine(
       parsed_tuple[1][0],

@@ -29,7 +29,7 @@ begin
         -- words are listed here.
         --
         -- MUST BE _UP TO DATE_ WITH ASSEMBLER FILES
-        -- LAST UPDATED [12/6/2018]
+        -- LAST UPDATED [1/6/2018]
         case i_opcode7 is
             when "00000" & "01" => w_num_fetches <= "01";
             when "00001" & "01" => w_num_fetches <= "01";
@@ -43,6 +43,7 @@ begin
             when "01101" & "01" => w_num_fetches <= "01";
             when "01110" & "01" => w_num_fetches <= "01";
             when "01111" & "01" => w_num_fetches <= "01";
+            when "10000" & "01" => w_num_fetches <= "01";
             when others         => w_num_fetches <= "00";
         end case;
     end process;

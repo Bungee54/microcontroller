@@ -1,214 +1,195 @@
-timestamp=1546716054918
+timestamp=1546818780452
 
 [~A]
-ModifyID=289
+ModifyID=28
 Version=74
 
 [alu]
-A/behavioral=21|./../src/alu.vhd|22|1*867657
-BinI32/behavioral=3*225676
-I=0*204288
-I/behavioral=0*260959
-M=11|0|vd0|1546711453614|./../src/alu.vhd|0*100437*0xb7ac65462f5659e4ff41ae0278becf84e6d2ed21|0*100835*0xd986fd7175c8cf28cd774bcadde79966
-M/behavioral=21|0|vd0|1546715829488|./../src/alu.vhd|0*110255*0xb6594a8844f92a139c3c90a2dd72458634948863|0*111291*0xb966535deb9617f745ced53ae4cc1a7f
-NSymbols/alu=40|0|2*19502
+A/behavioral=21|./../src/alu.vhd|22|1*88397
+BinI32/behavioral=3*21973
+I=0*10425
+I/behavioral=0*72160
+M=11|0|vd0|1546813663071|./../src/alu.vhd|0*9961*0x88b3bd3feaee6b1ec68ca6be52e2aac8d72d0fd9|0*10352*0xd986fd7175c8cf28cd774bcadde79966
+M/behavioral=21|0|vd0|1546814281667|./../src/alu.vhd|0*68621*0x1be52ea0aa69a8232219bc1248eb9a523bc6794b|0*70109*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/alu.vhd|9
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|fdc9c85601beb4171a6a25c637e2168ee2b6efad6fa5c2e6a33f73ad550082f1
-Version/behavioral=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff40ac74bafdadbf0eada98053725471931
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|fdc9c85601beb4171a6a25c637e2168ed4362f49679fab2535c8b42f7363f477
+Version/behavioral=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4bc5d978e1162291250e631f68242b31e
 
 [alu_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/alu_TB.vhd|12|1*893720
-BinI32/tb_architecture=3*232566
-I=0*214024
-I/tb_architecture=I/TB_ARCHITECTURE 0*268824
-M=11|0|vd0|1546711454002|./../src/TestBench/alu_TB.vhd|0*14644*0xb1678daa98ca9bf115af6df924922abaf77c32a4|0*14894*0xd986fd7175c8cf28cd774bcadde79966
-M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546715829984|./../src/TestBench/alu_TB.vhd|0*141570*0x8617a01e50297cdc0f1d57b7359359cd6d35ff83|0*143767*0xb966535deb9617f745ced53ae4cc1a7f
+A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/alu_TB.vhd|12|1*98240
+BinI32/tb_architecture=3*25595
+I=0*47948
+I/tb_architecture=I/TB_ARCHITECTURE 0*73965
+M=11|0|vd0|1546813729478|./../src/TestBench/alu_TB.vhd|0*47609*0xb1678daa98ca9bf115af6df924922abaf77c32a4|0*47859*0xd986fd7175c8cf28cd774bcadde79966
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546814281966|./../src/TestBench/alu_TB.vhd|0*48308*0xd8d87854c5a463968cfdea47200936ac0e52ad8f|0*50505*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/alu_TB.vhd|9
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|b5ca7ba7583dcb786be856c479ad2f64d3f12e147e2f150503c22e38e60acb0e
-Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea0cedb827c65ebc3bc8231e4f608e74bd
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|b5ca7ba7583dcb786be856c479ad2f640e3e91ce9d8b0ac20bb784bcbb975493
+Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534beacfb55d399f45ddde3cfb33641e79c192
 
 [control_unit]
-A/control_unit=21|./../src/control_unit.vhd|47|1*899309
-BinI32/control_unit=3*233653
-I=0*211446
-I/control_unit=0*274747
-M=11|0|vd0|1546711453819|./../src/control_unit.vhd|0*121388*0x66cd018bf1158ef793b15391c554cd23b9ebcbc5|0*122313*0xd986fd7175c8cf28cd774bcadde79966
-M/control_unit=21|0|vd0|1546716054852|./../src/control_unit.vhd|0*269899*0x39efce3d69cf4e9f025f03b0b2f2b86315a162c1|0*274640*0xb966535deb9617f745ced53ae4cc1a7f
+A/control_unit=21|./../src/control_unit.vhd|51|1*103829
+BinI32/control_unit=3*26682
+I=0*22914
+I/control_unit=0*90322
+M=11|0|vd0|1546813729070|./../src/control_unit.vhd|0*21807*0xde75bd08a5ef289681fd6466db2f765130a8a075|0*22823*0xd986fd7175c8cf28cd774bcadde79966
+M/control_unit=21|0|vd0|1546818141255|./../src/control_unit.vhd|0*75041*0x4d7be12f5beb499a43105af04fecc9709b8b7b34|0*90215*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/control_unit.vhd|14
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|62cdd31518126521df66462af92a6d2b711b818d9a1b2ffa542e7c475ffbd898a682dd09162975998a65db6a72ed90f9
-Version/control_unit=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|62cdd31518126521df66462af92a6d2b711b818d9a1b2ffa542e7c475ffbd8987aa42e30552cf0916f4eb8368675011e
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|62cdd31518126521df66462af92a6d2b711b818d9a1b2ffa542e7c475ffbd898fc3da29444b13f351e7c62f52e091808
+Version/control_unit=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|62cdd31518126521df66462af92a6d2b711b818d9a1b2ffa542e7c475ffbd89829e05b32ea6c9dc148b35f2c6b67a170
 
 [cpu]
-A/rtl=21|./../src/cpu.vhd|19|1*869105
-BinI32/rtl=3*227107
-I=0*210815
-I/rtl=0*261327
-M=11|0|vd0|1546711453686|./../src/cpu.vhd|0*53183*0xb8b2de885ebb42de6e087233935fd553afb3d9e0|0*53509*0xd986fd7175c8cf28cd774bcadde79966
-M/rtl=21|0|vd0|1546715829559|./../src/cpu.vhd|0*204645*0xf3998b7fe30cdadca0a91ebbae0c2fdb86355e75|0*210196*0xb966535deb9617f745ced53ae4cc1a7f
-NSymbols/cpu=40|0|2*8125
+A/rtl=21|./../src/cpu.vhd|19|1*70321
+BinI32/rtl=3*17223
+I=0*12443
+I/rtl=0*71042
+M=11|0|vd0|1546813728872|./../src/cpu.vhd|0*12044*0xb8b2de885ebb42de6e087233935fd553afb3d9e0|0*12370*0xd986fd7175c8cf28cd774bcadde79966
+M/rtl=21|0|vd0|1546814281440|./../src/cpu.vhd|0*12800*0xfef8ecf43a34f99fc1303557afe86c4ea97ec431|0*18942*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/cpu.vhd|10
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|13d2a6012ae176ed67c47d3a5127b060a4efd7b8a57cbabc41e763bc66317dbe
-Version/rtl=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|9dbb47eebe7da777b751efca131652c5167b2b641187f35011ca05891b9fa881
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|13d2a6012ae176ed67c47d3a5127b060a64043233fc881d0643d025a2d0506f6
+Version/rtl=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|9dbb47eebe7da777b751efca131652c53a7b2a39a18343855d13eba182e2401b
 
 [cpu_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/cpu_TB.vhd|11|1*885556
-BinI32/tb_architecture=3*230445
-I=0*212071
-I/tb_architecture=I/TB_ARCHITECTURE 0*267313
-M=11|0|vd0|1546711453830|./../src/TestBench/cpu_TB.vhd|0*13049*0x5af7a6b8491aaf3d12ec83c835fbabe4ac3b0849|0*13266*0xd986fd7175c8cf28cd774bcadde79966
-M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546715829770|./../src/TestBench/cpu_TB.vhd|0*155423*0x36c9145e57655d3705a690e2b9a323c200a525fa|0*156139*0xb966535deb9617f745ced53ae4cc1a7f
+A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/cpu_TB.vhd|11|1*90076
+BinI32/tb_architecture=3*23474
+I=0*38976
+I/tb_architecture=I/TB_ARCHITECTURE 0*72454
+M=11|0|vd0|1546813729168|./../src/TestBench/cpu_TB.vhd|0*38670*0x5af7a6b8491aaf3d12ec83c835fbabe4ac3b0849|0*38887*0xd986fd7175c8cf28cd774bcadde79966
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546814281741|./../src/TestBench/cpu_TB.vhd|0*39262*0x36c9145e57655d3705a690e2b9a323c200a525fa|0*39978*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/cpu_TB.vhd|8
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|a830c61fda23ae2cba6489a26f38d3c0a502260adc7c15cfa77e78622a96e6ca
-Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534beaa9b3fd8014b6308331058d8d1d81d2fb
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|a830c61fda23ae2cba6489a26f38d3c0598d7255c4b0058e96ef576dd7a5308c
+Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bead9f9878407fb6d27d8a474a694f65004
 
 [instruction_fetch_lut]
-A/instruction_fetch_lut=A/instruction_fetch_LUT 21|./../src/instruction_fetch_LUT.vhd|20|1*878700
-BinI32/instruction_fetch_lut=3*227640
-I=0*30484
-I/instruction_fetch_lut=I/instruction_fetch_LUT 0*261866
-M=11|0|vd0|1544134849372|./../src/instruction_fetch_LUT.vhd|0*6512*0xc497709dce79fa4a33b974621adee9f63c6ea223|0*6833*0xd986fd7175c8cf28cd774bcadde79966
-M/instruction_fetch_lut=M/instruction_fetch_LUT 21|0|vd0|1546715829637|./../src/instruction_fetch_LUT.vhd|0*6942*0x2a6260dcc2a136d7ba8c3b1cc0e04b0841412206|0*7824*0xb966535deb9617f745ced53ae4cc1a7f
+A/instruction_fetch_lut=A/instruction_fetch_LUT 21|./../src/instruction_fetch_LUT.vhd|20|1*109771
+BinI32/instruction_fetch_lut=3*30181
+I=0*19818
+I/instruction_fetch_lut=I/instruction_fetch_LUT 0*91686
+M=11|0|vd0|1546813729006|./../src/instruction_fetch_LUT.vhd|0*19388*0xc497709dce79fa4a33b974621adee9f63c6ea223|0*19709*0xd986fd7175c8cf28cd774bcadde79966
+M/instruction_fetch_lut=M/instruction_fetch_LUT 21|0|vd0|1546818780385|./../src/instruction_fetch_LUT.vhd|0*90627*0x80695dc02d92d097a0c86727b072149f17d06120|0*91552*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/instruction_fetch_LUT.vhd|13
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|ca35fc9534a8cfce866c0066a9a678c85b5be9a5b63f93c63243728d064070d38139d4a58c965fc2aa930b4278256465
-Version/instruction_fetch_lut=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|ca35fc9534a8cfce866c0066a9a678c85b5be9a5b63f93c63243728d064070d39e23924d063f4630db188fd2efdcbbbc
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|ca35fc9534a8cfce866c0066a9a678c85b5be9a5b63f93c63243728d064070d398b48a3401291f85d210070dc5bc7e30
+Version/instruction_fetch_lut=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|ca35fc9534a8cfce866c0066a9a678c85b5be9a5b63f93c63243728d064070d36d9852957849a84bbae599968ba945bd
 
 [instruction_fetch_lut_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/instruction_fetch_lut_TB.vhd|10|1*897242
-BinI32/tb_architecture=3*233393
-I=0*31164
-I/tb_architecture=I/TB_ARCHITECTURE 0*269388
-M=11|0|vd0|1544135673242|./../src/TestBench/instruction_fetch_lut_TB.vhd|0*7958*0xa060fc9f9765d7c67f2af87cadd916df114643d3|0*8216*0xd986fd7175c8cf28cd774bcadde79966
-M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546715830051|./../src/TestBench/instruction_fetch_lut_TB.vhd|0*8341*0xbff4b8e0872302aad99df289b0c102b86d4a18fb|0*8967*0xb966535deb9617f745ced53ae4cc1a7f
+A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/instruction_fetch_lut_TB.vhd|10|1*101762
+BinI32/tb_architecture=3*26422
+I=0*52071
+I/tb_architecture=I/TB_ARCHITECTURE 0*74530
+M=11|0|vd0|1546813729599|./../src/TestBench/instruction_fetch_lut_TB.vhd|0*51688*0xa060fc9f9765d7c67f2af87cadd916df114643d3|0*51946*0xd986fd7175c8cf28cd774bcadde79966
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546814282035|./../src/TestBench/instruction_fetch_lut_TB.vhd|0*52328*0xbff4b8e0872302aad99df289b0c102b86d4a18fb|0*52954*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/instruction_fetch_lut_TB.vhd|7
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|ca35fc9534a8cfce866c0066a9a678c8c6bd5a0ae30beebc17a7e4e6c38cf06587dff3ca29dc89f6fb5ef56f2a729a508778c3785707eb93e575bca7f7ad31ed
-Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534beacb154ff5dd431a67e701662331ccbae3
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|ca35fc9534a8cfce866c0066a9a678c8c6bd5a0ae30beebc17a7e4e6c38cf06587dff3ca29dc89f6fb5ef56f2a729a50f8e79379468a6df9c81cd730153c832d
+Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea3dadff371c6c72e0dc1505569003bd53
 
 [memory]
-A/behavioral=21|./../src/memory.vhd|22|1*863298
-BinI32/behavioral=3*223735
-I=0*65794
-I/behavioral=0*260408
-M=11|0|vd0|1546641754878|./../src/memory.vhd|0*65363*0x77b58718fcd5f292dbe0521f69169f2c4d2fca59|0*65715*0xd986fd7175c8cf28cd774bcadde79966
-M/behavioral=21|0|vd0|1546715829337|./../src/memory.vhd|0*259285*0xcc6fdcfbf01354e15eb518212232d9285446aea8|0*260315*0xb966535deb9617f745ced53ae4cc1a7f
-NSymbols/memory=40|0|2*10013
+A/behavioral=21|./../src/memory.vhd|22|1*65962
+BinI32/behavioral=3*15282
+I=0*2758
+I/behavioral=0*70490
+M=11|0|vd0|1546813662905|./../src/memory.vhd|0*2327*0x77b58718fcd5f292dbe0521f69169f2c4d2fca59|0*2679*0xd986fd7175c8cf28cd774bcadde79966
+M/behavioral=21|0|vd0|1546814281221|./../src/memory.vhd|0*2995*0xcc6fdcfbf01354e15eb518212232d9285446aea8|0*4025*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/memory.vhd|10
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|fce057f312e65ae91f0ff41fc895663347eafdb40825d53370737cdf2c3970af
-Version/behavioral=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff406a5c568df6309c888d6b99abbcd6daa
-Version/structural=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|763af2576fce11abd6060bb6269849fa7b35399d4d6b9112dfc7987dc24af3eb621dde6883dba3b4735c4c39571e2e45
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|fce057f312e65ae91f0ff41fc895663368afc11b2254ca75c88e0b1847b93d95
+Version/behavioral=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4097b7ba8fc459c49078618aa9e01332c
 
 [memory_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/memory_TB.vhd|11|1*890643
-BinI32/tb_architecture=3*231690
-I=0*213328
-I/tb_architecture=I/TB_ARCHITECTURE 0*268324
-M=11|0|vd0|1546711453984|./../src/TestBench/memory_TB.vhd|0*1540*0x7db2f0f20121c7cba4bb30d5fa837c37b6798a1e|0*1769*0xd986fd7175c8cf28cd774bcadde79966
-M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546715829905|./../src/TestBench/memory_TB.vhd|0*228174*0x3e335e0dbfc5d25dea372e4393475675120f669e|0*229572*0xb966535deb9617f745ced53ae4cc1a7f
+A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/memory_TB.vhd|11|1*95163
+BinI32/tb_architecture=3*24719
+I=0*44801
+I/tb_architecture=I/TB_ARCHITECTURE 0*73465
+M=11|0|vd0|1546813729305|./../src/TestBench/memory_TB.vhd|0*44477*0x7db2f0f20121c7cba4bb30d5fa837c37b6798a1e|0*44706*0xd986fd7175c8cf28cd774bcadde79966
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546814281893|./../src/TestBench/memory_TB.vhd|0*45090*0x3e335e0dbfc5d25dea372e4393475675120f669e|0*46488*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/memory_TB.vhd|8
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|e8db9ca434e436ee1345b23ece7f3f0eee3177275db17dd2c2b63493573c087e1ccc9a20a197d08258451c6d1061b3f8
-Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bead0a0c3e032fcafd9797b50d65ef92d57
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|e8db9ca434e436ee1345b23ece7f3f0eee3177275db17dd2c2b63493573c087e405b907c40e7150b309f05d444ae54f1
+Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea96f39fe54280b0b5dc953e8c69d67d38
 
 [microcontroller_package]
-E=1*653039
-I=0*203666
-M=3|0|vd0|1546711453600|./../src/microcontroller_package.vhd|0*202307*0xed4a25768ba38890f055037485edb5ede38b9011|0*203553*0xd986fd7175c8cf28cd774bcadde79966
+E=1*2296
+I=0*7372
+M=3|0|vd0|1546813662976|./../src/microcontroller_package.vhd|0*5912*0xd35c1081dfb6f049a1458648a3026bac146037b6|0*7259*0xd986fd7175c8cf28cd774bcadde79966
 R=./../src/microcontroller_package.vhd|7
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|140de0661f4d66263f67d21a1983ac1b7ecd601e8ad6196f3bc2d48ba8d9177d26527262ddaa47cb266f3a3c4d9b973ad7089652a37fb8b4178afdc3555e3f4d
-
-[ram]
-A/structural=21|./../src/ram.vhd|22|1*29100
-BinI32/structural=3*9008
-I=0*34497
-I/structural=0*34731
-M=11|0|vd0|1542846132098|./../src/ram.vhd|0*0*0x3e88c13bdba9849831599a977303668f5887974c|0*347*0xd986fd7175c8cf28cd774bcadde79966
-M/structural=21|0|vd0|1542846132106|./../src/ram.vhd|0*420*0x5e078f78dacaa795d69c066d453018e28388891a|0*1453*0xb966535deb9617f745ced53ae4cc1a7f
-R=./../src/ram.vhd|10
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|a936fc2a703b3f48871772595baaafeb3e5abab6d800811a8da341230aba69c4
-Version/structural=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|763af2576fce11abd6060bb6269849fa7b35399d4d6b9112dfc7987dc24af3eb5d39b298d2c8897a346f51ae3422003e
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|140de0661f4d66263f67d21a1983ac1b7ecd601e8ad6196f3bc2d48ba8d9177d26527262ddaa47cb266f3a3c4d9b973adb6c2e027acf907b54c7c446bea8fb03
 
 [register_file]
-A/behavioral=21|./../src/register_file.vhd|21|1*865594
-BinI32/behavioral=3*225060
-I=0*215602
-I/behavioral=0*260656
-M=11|0|vd0|1546711455567|./../src/register_file.vhd|0*67685*0xb26ace05032f32e3c3c7d8a4c2ea2767aace078d|0*68133*0xd986fd7175c8cf28cd774bcadde79966
-M/behavioral=21|0|vd0|1546715829412|./../src/register_file.vhd|0*189453*0x52f8e214e616a3e1a791e3499cffa795407a1a09|0*190003*0xb966535deb9617f745ced53ae4cc1a7f
-NSymbols/register_file=40|0|2*12655
+A/behavioral=21|./../src/register_file.vhd|21|1*68258
+BinI32/behavioral=3*16607
+I=0*8444
+I/behavioral=0*70738
+M=11|0|vd0|1546813662986|./../src/register_file.vhd|0*7903*0xb26ace05032f32e3c3c7d8a4c2ea2767aace078d|0*8351*0xd986fd7175c8cf28cd774bcadde79966
+M/behavioral=21|0|vd0|1546814281316|./../src/register_file.vhd|0*8737*0x52f8e214e616a3e1a791e3499cffa795407a1a09|0*9287*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/register_file.vhd|9
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|a396fecd832e4041f15ae1be4d0acbff9590461053dd9c77b27bc3f69d93ce3905e0a66c61d72eceefd4e6fd7bdf756b
-Version/behavioral=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff44844a049114e06d2f6e8d2f1a924a8fa
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|a396fecd832e4041f15ae1be4d0acbff9590461053dd9c77b27bc3f69d93ce39f9d422ebfc37cab1a899dfc540cf62e4
+Version/behavioral=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|35f8e56ee514308d50318f7abb190927faf8176ad6902a7357df79bb1a85bff4d3fef7ee4356576ce3580d2f7b69e972
 
 [register_file_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/register_file_TB.vhd|11|1*887512
-BinI32/tb_architecture=3*231003
-I=0*212859
-I/tb_architecture=I/TB_ARCHITECTURE 0*267801
-M=11|0|vd0|1546711453912|./../src/TestBench/register_file_TB.vhd|0*17708*0x1ccaa2d1908b643c8a654d0c5c3dae8e48ac424c|0*17965*0xd986fd7175c8cf28cd774bcadde79966
-M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546715829836|./../src/TestBench/register_file_TB.vhd|0*58901*0x429b73bc15eab9748531d24d8e7c2b9ba32fa9ac|0*60414*0xb966535deb9617f745ced53ae4cc1a7f
-NSymbols/register_file_tb=40|0|2*12015
+A/tb_architecture=A/TB_ARCHITECTURE 21|./../src/TestBench/register_file_TB.vhd|11|1*92032
+BinI32/tb_architecture=3*24032
+I=0*41426
+I/tb_architecture=I/TB_ARCHITECTURE 0*72941
+M=11|0|vd0|1546813729235|./../src/TestBench/register_file_TB.vhd|0*41060*0x1ccaa2d1908b643c8a654d0c5c3dae8e48ac424c|0*41317*0xd986fd7175c8cf28cd774bcadde79966
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|vd0|1546814281825|./../src/TestBench/register_file_TB.vhd|0*41722*0x429b73bc15eab9748531d24d8e7c2b9ba32fa9ac|0*43235*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/register_file_TB.vhd|8
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|a396fecd832e4041f15ae1be4d0acbffe1b32a18a8dc593eff6eff41bd4247784a7155314fc662103ce5016fef6cb7a8
-Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534beac6f9f69d2f79279584aeded0301f4a8b
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|a396fecd832e4041f15ae1be4d0acbffe1b32a18a8dc593eff6eff41bd424778d4d746b3d7626f5652020d6668bd0dcf
+Version/tb_architecture=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea3baf5b1da2b3310e351e14b96ce3372b
 
 [testbench_for_alu]
 Configures=alu_tb.TB_ARCHITECTURE
-E=1*896765
-I=0*269232
-M=2|0|vd0|1546715829990|./../src/TestBench/alu_TB.vhd|0*17352*0x89422e1e87f2062e61b7034ad6abc6cf2b1496a1|0*17599*0xb966535deb9617f745ced53ae4cc1a7f
+E=1*101285
+I=0*74374
+M=2|0|vd0|1546814281972|./../src/TestBench/alu_TB.vhd|0*51022*0x89422e1e87f2062e61b7034ad6abc6cf2b1496a1|0*51269*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/alu_TB.vhd|162
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5b8f23e5cabe222998e0c23066880c31ed5e25e3cd15547596f838568b98c69ef
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5b8f23e5cabe222998e0c23066880c31e048765f887ed60a25e905707435ffb59
 
 [testbench_for_cpu]
 Configures=cpu_tb.TB_ARCHITECTURE
-E=1*887069
-I=0*267647
-M=2|0|vd0|1546715829774|./../src/TestBench/cpu_TB.vhd|0*14295*0x027c5f29c8a6ada61a4c4263420d6672eb97aba4|0*14535*0xb966535deb9617f745ced53ae4cc1a7f
+E=1*91589
+I=0*72787
+M=2|0|vd0|1546814281746|./../src/TestBench/cpu_TB.vhd|0*40419*0x027c5f29c8a6ada61a4c4263420d6672eb97aba4|0*40659*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/cpu_TB.vhd|61
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5bba52b842265c3e0d528d601b7796155a77f1bfb7462095703049c0ed646054b
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5bba52b842265c3e0d528d601b779615547b173fe8c503ba74b6984e2547d21be
 
 [testbench_for_instruction_fetch_lut]
 Configures=instruction_fetch_lut_tb.TB_ARCHITECTURE
-E=1*898786
-I=0*269707
-M=2|0|vd0|1546715830056|./../src/TestBench/instruction_fetch_lut_TB.vhd|0*9111*0xa5dd120379cb0cfaab803c90d8d964e13d4d671b|0*9513*0xb966535deb9617f745ced53ae4cc1a7f
+E=1*103306
+I=0*74849
+M=2|0|vd0|1546814282040|./../src/TestBench/instruction_fetch_lut_TB.vhd|0*53417*0xa5dd120379cb0cfaab803c90d8d964e13d4d671b|0*53819*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/instruction_fetch_lut_TB.vhd|42
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5287194df6fa4069b8ae5b64772debbd6b6c62b106d08eb800fa050a7d1c9b0f7ff88686eb759a926e4497ac656f546c7
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5287194df6fa4069b8ae5b64772debbd6b6c62b106d08eb800fa050a7d1c9b0f74630c61e7d543f0f70ed084fea28327e
 
 [testbench_for_memory]
 Configures=memory_tb.TB_ARCHITECTURE
-E=1*893255
-I=0*268662
-M=2|0|vd0|1546715829914|./../src/TestBench/memory_TB.vhd|0*3434*0x424612a429acf330fd731a2218298e497a5364d8|0*3705*0xb966535deb9617f745ced53ae4cc1a7f
+E=1*97775
+I=0*73803
+M=2|0|vd0|1546814281898|./../src/TestBench/memory_TB.vhd|0*46940*0x424612a429acf330fd731a2218298e497a5364d8|0*47211*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/memory_TB.vhd|90
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e54680bdd0b906d3999f394dbdc358d5ecba6308fe8bcd9e29a95abfd6a8cc072e
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e54680bdd0b906d3999f394dbdc358d5ecb7469fe5a7f2490a5806a6e1049b9539
 
 [testbench_for_register_file]
 Configures=register_file_tb.TB_ARCHITECTURE
-E=1*890143
-I=0*268150
-M=2|0|vd0|1546715829841|./../src/TestBench/register_file_TB.vhd|0*19889*0x68c686ff705d3e2703272aa8053a0dd4cb9a88a4|0*20216*0xb966535deb9617f745ced53ae4cc1a7f
+E=1*94663
+I=0*73291
+M=2|0|vd0|1546814281830|./../src/TestBench/register_file_TB.vhd|0*43713*0x68c686ff705d3e2703272aa8053a0dd4cb9a88a4|0*44040*0xb966535deb9617f745ced53ae4cc1a7f
 R=./../src/TestBench/register_file_TB.vhd|93
-Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5f0a6ba115d3f100c8b37d02631a2b712ba7ce52835a93909fa8dd39d13a74f3191ef452d503d3abd31bd73c60fe6400b
+Version=10.3.3558.6081  (Windows)|00000009789cd3f53756d0353230b00000090c01c7|5efd636a07bb57613e35fadc81a5c3e5f0a6ba115d3f100c8b37d02631a2b712ba7ce52835a93909fa8dd39d13a74f31de8da8f4d16664fc814847d4211d7a21
 
 [~MFT]
-0=8|0Microcontroller.mgf|274747|230957
-1=2|1Microcontroller.mgf|899309|864895
-2=0|2Microcontroller.mgf|19502|9776
-3=2|3Microcontroller.mgf|233653|224534
+0=8|0Microcontroller.mgf|91686|38407
+1=2|1Microcontroller.mgf|109771|71247
+3=2|3Microcontroller.mgf|30181|19425
 
 [~U]
-alu=ALU 11|0*100174||0x3
-alu_tb=11|0*27537|
-control_unit=11|0*120959|
-cpu=11|0*52951||0x3
-cpu_tb=11|0*29498|
-instruction_fetch_lut=instruction_fetch_LUT 11|0*30233|
-instruction_fetch_lut_tb=11|0*31010|
-memory=11|0*65129||0x3
-memory_tb=11|0*32707|
-microcontroller_package=3|0*200891|0*201394
-ram=11|0*34263|
-register_file=11|0*67408||0x3
-register_file_tb=11|0*35821||0x3
+alu=ALU 11|0*9698|
+alu_tb=11|0*47491|
+control_unit=11|0*21360|
+cpu=11|0*11812|
+cpu_tb=11|0*38552|
+instruction_fetch_lut=instruction_fetch_LUT 11|0*19137|
+instruction_fetch_lut_tb=11|0*51534|
+memory=11|0*2093|
+memory_tb=11|0*44353|
+microcontroller_package=3|0*4366|0*4897
+register_file=11|0*7626|
+register_file_tb=11|0*40922|
 testbench_for_alu=TESTBENCH_FOR_alu 2||
 testbench_for_cpu=TESTBENCH_FOR_cpu 2||
 testbench_for_instruction_fetch_lut=TESTBENCH_FOR_instruction_fetch_lut 2||

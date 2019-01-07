@@ -24,7 +24,8 @@ package microcontroller_package is
         SEL_RAM_DATA,
         SEL_ROM_DATA,
         SEL_REGF_RDATA1,
-        SEL_REGF_RDATA2
+        SEL_REGF_RDATA2,
+        SEL_FETCH_REG
     );
 
     type T_ALU_SELECT is (
@@ -38,8 +39,9 @@ package microcontroller_package is
         SEL_OR,
         SEL_XOR,
         SEL_NOT,
-        SEL_SHL,
-        SEL_SHR
+        SEL_LSL,
+        SEL_LSR,
+        SEL_ASR
     );
 
     type T_CPU_STATE is (
@@ -58,5 +60,16 @@ package microcontroller_package is
 
         -- HALT state (do nothing more)
         HALT
+    );
+
+    --  Type to specify the set of arguments to a certain instruction.
+    -- For example, the "ADD rA, rB" instruction would take ARGSET_REG_REG,
+    -- "ADD rA, 234" would take ARGSET_REG_NUM, and "NOT rA" would take ARGSET_REG.
+    -- Useful for having a single procedure conduct all substeps of an instruction
+    -- that requires an ALU computation, but with multiple sets of arguments. 
+    type T_ARGSET is (
+        ARGSET_REG_REG,
+        ARGSET_REG_NUM,
+        ARGSET_REG
     );
 end microcontroller_package;

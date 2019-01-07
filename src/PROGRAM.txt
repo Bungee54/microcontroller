@@ -1,2 +1,11 @@
-ADD r0, r1
-HALT
+            MOV r0, 1
+            MOV r1, 1
+            STO r0, 0
+            STO r0, 1
+            MOV r7, 2
+loop_start: MOV r2, r0
+            ADD r0, r1
+            MOV r1, r2
+            STO r0, r7
+            INC r7
+            AJMP <loop_start>

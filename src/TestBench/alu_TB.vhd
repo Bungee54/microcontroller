@@ -147,13 +147,13 @@ begin
         -- Shift L
         A <= "0000100000000000";
         B <= "0000000000000010";
-        SEL <= SEL_SHL;
+        SEL <= SEL_LSL;
         wait for 20 ns;
 
         -- Shift R
         A <= "0000100000000000";
         B <= "0000000000000010";
-        SEL <= SEL_SHR;
+        SEL <= SEL_LSR;
         wait for 20 ns;
     end process STIMULUS;
 

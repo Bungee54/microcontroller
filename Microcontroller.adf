@@ -67,9 +67,8 @@ TestBench=1
 
 [Files]
 /memory.vhd=-1
-/register_file.vhd=-1
 /microcontroller_package.vhd=-1
-/alu.vhd=-1
+/register_file.vhd=-1
 /cpu.vhd=-1
 /register_file_test.asdb=-1
 /register_file_test.awc=-1
@@ -81,6 +80,9 @@ TestBench=1
 /memory_test.awc=-1
 /instruction_fetch_LUT.vhd=-1
 /control_unit.vhd=-1
+/integration_test.asdb=-1
+/integration_test.awc=-1
+/alu.vhd=-1
 TestBench/cpu_TB.vhd=-1
 TestBench/register_file_TB.vhd=-1
 TestBench/memory_TB.vhd=-1
@@ -94,9 +96,8 @@ TestBench/instruction_fetch_lut_TB_runtest.do=-1
 
 [Files.Data]
 .\src\memory.vhd=VHDL Source Code
-.\src\register_file.vhd=VHDL Source Code
 .\src\microcontroller_package.vhd=VHDL Source Code
-.\src\alu.vhd=VHDL Source Code
+.\src\register_file.vhd=VHDL Source Code
 .\src\cpu.vhd=VHDL Source Code
 .\src\register_file_test.asdb=Accelerated Waveform File
 .\src\register_file_test.awc=Accelerated Waveform Configuration
@@ -108,6 +109,9 @@ TestBench/instruction_fetch_lut_TB_runtest.do=-1
 .\src\memory_test.awc=Accelerated Waveform Configuration
 .\src\instruction_fetch_LUT.vhd=VHDL Source Code
 .\src\control_unit.vhd=VHDL Source Code
+.\src\integration_test.asdb=Accelerated Waveform File
+.\src\integration_test.awc=Accelerated Waveform Configuration
+.\src\alu.vhd=VHDL Source Code
 .\src\TestBench\cpu_TB.vhd=VHDL Test Bench
 .\src\TestBench\register_file_TB.vhd=VHDL Test Bench
 .\src\TestBench\memory_TB.vhd=VHDL Test Bench

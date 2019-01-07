@@ -29,7 +29,6 @@ architecture rtl of cpu is
         i_FLAG_ZERO : in STD_LOGIC;
 
         i_num_fetches : in UNSIGNED(1 downto 0);
-        out_opcode7 : out T_OPCODE;
 
         out_BUS0_sel : out T_BUS_SELECT;
         out_BUS1_sel : out T_BUS_SELECT;
@@ -39,13 +38,17 @@ architecture rtl of cpu is
         out_RAM_loadAddr : out T_LOAD;
         out_RAM_loadData : out T_LOAD;
         out_regf_loadWData : out T_LOAD;
+        out_fetchLUT_load : out T_LOAD;
 
         out_ALU_sel : out T_ALU_SELECT;
         out_regf_raddr1 : out T_REGF_ADDR;
         out_regf_raddr2 : out T_REGF_ADDR;
         out_regf_waddr : out T_REGF_ADDR;
         out_regf_rw : out STD_LOGIC;
-        out_ROM_addr : out T_WORD
+        out_RAM_rw : out STD_LOGIC;
+        out_ROM_addr : out T_WORD;
+
+        out_fetched_word : out T_WORD
         );
     end component;
 
@@ -96,7 +99,6 @@ architecture rtl of cpu is
     -- RAM signals
     signal ram_addr : T_WORD;
     signal ram_data : T_WORD;
-    signal ram_rw : STD_LOGIC;
 
     -- ROM signals
     signal rom_addr : T_WORD;
@@ -117,15 +119,18 @@ architecture rtl of cpu is
     signal ctrl_regf_waddr : STD_LOGIC_VECTOR(2 downto 0);
     signal ctrl_regf_rw : STD_LOGIC;
 
-    signal ctrl_ALU_sel : T_ALU_SELECT;
-
     signal ctrl_ALU_loadA : T_LOAD;
     signal ctrl_ALU_loadB : T_LOAD;
+    signal ctrl_ALU_sel : T_ALU_SELECT;
     signal ctrl_RAM_loadAddr : T_LOAD;
     signal ctrl_RAM_loadData : T_LOAD;
+    signal ctrl_RAM_rw : STD_LOGIC;
     signal ctrl_regf_loadWData : T_LOAD;
     signal ctrl_BUS0_sel : T_BUS_SELECT;
     signal ctrl_BUS1_sel : T_BUS_SELECT;
+    signal ctrl_fetchLUT_load : T_LOAD;
+
+    signal ctrl_fetched_word : T_WORD;
 
     -- General-purpose buses
     signal BUS0 : T_WORD;
@@ -145,7 +150,6 @@ begin
         i_FLAG_ZERO => alu_status_out(7),
 
         i_num_fetches => fetch_lut_result,
-        out_opcode7 => fetch_opcode7,
 
         out_BUS0_sel => ctrl_BUS0_sel,
         out_BUS1_sel => ctrl_BUS1_sel,
@@ -155,13 +159,17 @@ begin
         out_RAM_loadAddr => ctrl_RAM_loadAddr,
         out_RAM_loadData => ctrl_RAM_loadData,
         out_regf_loadWData => ctrl_regf_loadWData,
+        out_fetchLUT_load => ctrl_fetchLUT_load,
 
         out_ALU_sel => ctrl_ALU_sel,
         out_regf_raddr1 => ctrl_regf_raddr1,
         out_regf_raddr2 => ctrl_regf_raddr2,
         out_regf_waddr => ctrl_regf_waddr,
         out_regf_rw => ctrl_regf_rw,
-        out_ROM_addr => rom_addr
+        out_RAM_rw => ctrl_RAM_rw,
+        out_ROM_addr => rom_addr,
+
+        out_fetched_word => ctrl_fetched_word
     );
 
     comp_ALU : ALU
@@ -183,7 +191,7 @@ begin
     port map (
         i_clk => i_clk,
         i_address => ram_addr,
-        i_rw => ram_rw,                -- '0'=read, '1'=write
+        i_rw => ctrl_RAM_rw,                -- '0'=read, '1'=write
         io_data => ram_data
     );
 
@@ -225,6 +233,7 @@ begin
             when SEL_ROM_DATA => BUS0 <= rom_data;
             when SEL_REGF_RDATA1 => BUS0 <= regf_rdata1;
             when SEL_REGF_RDATA2 => BUS0 <= regf_rdata2;
+            when SEL_FETCH_REG => BUS0 <= ctrl_fetched_word;
         end case;
     end process;
 
@@ -237,6 +246,7 @@ begin
             when SEL_ROM_DATA => BUS1 <= rom_data;
             when SEL_REGF_RDATA1 => BUS1 <= regf_rdata1;
             when SEL_REGF_RDATA2 => BUS1 <= regf_rdata2;
+            when SEL_FETCH_REG => BUS1 <= ctrl_fetched_word;
         end case;
     end process;
 
@@ -296,6 +306,19 @@ begin
                 regf_wdata <= BUS0;
             else
                 regf_wdata <= BUS1;
+            end if;
+        end if;
+    end process;
+
+    process (ctrl_fetchLUT_load, BUS0, BUS1)
+    begin
+        if (ctrl_fetchLUT_load(1) = '1') then
+            if (ctrl_fetchLUT_load(0) = '0') then
+                -- This long expression just takes the opcode bits off the instruction.
+                -- (The opcode is the most significant `opcode_size` bits of each BUS)
+                fetch_opcode7 <= BUS0((BUS0'left) downto (BUS0'left - (opcode_size - 1)));
+            else
+                fetch_opcode7 <= BUS1((BUS1'left) downto (BUS1'left - (opcode_size - 1)));
             end if;
         end if;
     end process;

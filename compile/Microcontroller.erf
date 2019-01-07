@@ -1,5 +1,5 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\control_unit.vhd" 
-MESSAGE "Compile Entity "control_unit"" 
-MESSAGE "Compile Architecture "control_unit" of Entity "control_unit"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd" 
+MESSAGE "Compile Entity "instruction_fetch_LUT"" 
+MESSAGE "Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"" 
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 

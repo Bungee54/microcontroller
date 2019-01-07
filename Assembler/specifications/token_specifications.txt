@@ -9,9 +9,10 @@ INSTRUCTION        All capital letters matching an instruction from
                    Ex.      'ADD', 'SUB', 'HALT'
                    Non Ex.  'ADD3', 'SUB:'
 
-LABEL_DEF          All lowercase letters and numbers, but must begin
-                   with a lowercase letter. Cannot begin with a
-                   lowercase 'r' followed by a digit. Ends in ':'.
+LABEL_DEF          All lowercase letters and numbers (or '_'), 
+                   but must begin with a lowercase letter. Cannot 
+                   begin with a lowercase 'r' followed by a digit. 
+                   Ends in ':'.
                    Must appear at the beginning of a line.
                    Used to define a label somewhere in the program.
                    Ex.      'label1:', 'test:'
