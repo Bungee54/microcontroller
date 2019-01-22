@@ -1,5 +1,100 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd" 
+MESSAGE "Compile Entity "memory"" 
+MESSAGE "Compile Architecture "behavioral" of Entity "memory"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd" 
+MESSAGE "Compile Package "microcontroller_package"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd" 
+MESSAGE "Compile Entity "register_file"" 
+MESSAGE "Compile Architecture "behavioral" of Entity "register_file"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd" 
+BEGINPROGRESS c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
+UPDATEPROGRESS 1
+MESSAGE "Compile Entity "cpu"" 
+UPDATEPROGRESS 4
+MESSAGE "Compile Architecture "rtl" of Entity "cpu"" 
+UPDATEPROGRESS 15
+UPDATEPROGRESS 19
+UPDATEPROGRESS 22
+UPDATEPROGRESS 25
+UPDATEPROGRESS 28
+UPDATEPROGRESS 29
+UPDATEPROGRESS 30
+UPDATEPROGRESS 31
+UPDATEPROGRESS 32
+UPDATEPROGRESS 33
+UPDATEPROGRESS 34
+UPDATEPROGRESS 35
+UPDATEPROGRESS 36
+UPDATEPROGRESS 37
+UPDATEPROGRESS 38
+UPDATEPROGRESS 39
+UPDATEPROGRESS 40
+UPDATEPROGRESS 41
+UPDATEPROGRESS 42
+UPDATEPROGRESS 53
+UPDATEPROGRESS 57
+UPDATEPROGRESS 60
+UPDATEPROGRESS 63
+UPDATEPROGRESS 67
+UPDATEPROGRESS 69
+UPDATEPROGRESS 72
+UPDATEPROGRESS 73
+UPDATEPROGRESS 76
+UPDATEPROGRESS 77
+UPDATEPROGRESS 80
+UPDATEPROGRESS 81
+UPDATEPROGRESS 84
+UPDATEPROGRESS 85
+UPDATEPROGRESS 88
+UPDATEPROGRESS 89
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 99
+UPDATEPROGRESS 100
+ENDPROGRESS c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd
 MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd" 
 MESSAGE "Compile Entity "instruction_fetch_LUT"" 
 MESSAGE "Compile Architecture "instruction_fetch_LUT" of Entity "instruction_fetch_LUT"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\control_unit.vhd" 
+BEGINPROGRESS c:\My_Aldec_Designs\test_workspace\Microcontroller\src\control_unit.vhd
+MESSAGE "Compile Entity "control_unit"" 
+UPDATEPROGRESS 4
+UPDATEPROGRESS 5
+MESSAGE "Compile Architecture "control_unit" of Entity "control_unit"" 
+UPDATEPROGRESS 6
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
+UPDATEPROGRESS 9
+UPDATEPROGRESS 11
+UPDATEPROGRESS 20
+UPDATEPROGRESS 21
+UPDATEPROGRESS 99
+UPDATEPROGRESS 100
+ENDPROGRESS c:\My_Aldec_Designs\test_workspace\Microcontroller\src\control_unit.vhd
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd" 
+MESSAGE "Compile Entity "ALU"" 
+MESSAGE "Compile Architecture "behavioral" of Entity "ALU"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd" 
+MESSAGE "Compile Entity "cpu_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "cpu_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_cpu"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" 
+MESSAGE "Compile Entity "register_file_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "register_file_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_register_file"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd" 
+MESSAGE "Compile Entity "memory_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "memory_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_memory"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd" 
+MESSAGE "Compile Entity "alu_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "alu_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_alu"" 
+MESSAGE "File: c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd" 
+MESSAGE "Compile Entity "instruction_fetch_lut_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "instruction_fetch_lut_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_instruction_fetch_lut"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.8 [s]" 

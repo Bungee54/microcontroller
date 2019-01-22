@@ -6,7 +6,9 @@ instructions = [
   'ADD', 'SUB', 'NEG', 'INC',
   'DEC', 'AND', 'OR',  'XOR',
   'NOT', 'LSL', 'LSR', 'ASR', 
-  'CMP', 'AJMP','LDI', 'STO',
+  'CMP', 'AJMP','AJE', 'AJNE',
+  'AJL', 'AJLE','AJG', 'AJGE',
+  'LDI', 'STO',
   'MOV', 'RET', 'HALT'
 ]
 

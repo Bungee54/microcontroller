@@ -1,4 +1,4 @@
-28
+36
 ~E 1 "./../src/alu.vhd" 9 ALU
 ~A 1 "./../src/alu.vhd" 22 behavioral
 ~E 1 "./../src/TestBench/alu_TB.vhd" 9 alu_tb

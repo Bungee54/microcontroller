@@ -1,0 +1,6 @@
+NEW INSTRUCTION CHECKLIST
+---------------------------
+1. Add to asm_info.py's opcode dictionary
+2. Add implementation in control_unit.vhd
+3. Add entry (if needed) in instruction_fetch_LUT.vhd
+4. Add token in asm_lexer.py

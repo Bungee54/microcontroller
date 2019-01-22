@@ -1,2 +1,13 @@
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\memory.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\microcontroller_package.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\register_file.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\cpu.vhd" VHDL Microcontroller 1 0 0 -02 -08
 "c:\My_Aldec_Designs\test_workspace\Microcontroller\src\instruction_fetch_LUT.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\control_unit.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\alu.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\cpu_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\register_file_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\memory_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\alu_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
+"c:\My_Aldec_Designs\test_workspace\Microcontroller\src\TestBench\instruction_fetch_lut_TB.vhd" VHDL Microcontroller 1 0 0 -02 -08
 . . 0 0 0
